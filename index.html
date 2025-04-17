@@ -1,30 +1,63 @@
 <!DOCTYPE HTML>
-<!--
-	Hyperspace by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<html class="sci-fi-theme">
 	<head>
 		<title>Ryan Rousell's Portfolio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="last-modified" content="April 16, 2025" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="assets/libs/aos/aos.css" />
+		<!-- Load fonts for sci-fi theme -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500&display=swap">
+		
+		<!-- CSS files in proper cascade order -->
+		<link rel="stylesheet" href="assets/css/fontawesome-all.min.css" /> <!-- Icon fonts -->
+		<link rel="stylesheet" href="assets/css/base.css" /> <!-- Basic reset and typography -->
+		<link rel="stylesheet" href="assets/css/layout.css" /> <!-- Structural layout -->
+		<link rel="stylesheet" href="assets/css/sci-fi-theme.css" /> <!-- Visual styling (loaded last) -->
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* High-priority overrides to ensure sci-fi theme takes precedence */
+			.sci-fi-theme.is-preload *, 
+			.sci-fi-theme.is-preload *:before, 
+			.sci-fi-theme.is-preload *:after {
+				animation: none !important;
+				transition: none !important;
+			}
+			
+			body.sci-fi-theme {
+				background: var(--gradient-interface) !important;
+				font-family: var(--font-primary) !important;
+				color: var(--color-text) !important;
+			}
+			
+			.sci-fi-theme .wrapper.style1, 
+			.sci-fi-theme .wrapper.style2, 
+			.sci-fi-theme .wrapper.style3 {
+				background-color: transparent !important;
+			}
+			
+			.sci-fi-theme #sidebar {
+				background-color: rgba(10, 22, 49, 0.9) !important;
+			}
+			
+			.sci-fi-theme h1, 
+			.sci-fi-theme h2, 
+			.sci-fi-theme h3 {
+				font-family: var(--font-display) !important;
+				color: var(--color-text-bright) !important;
+			}
+		</style>
 	</head>
-	<body class="is-preload">
+	<body class="is-preload sci-fi-theme">
 
 		<!-- Sidebar -->
 			<section id="sidebar">
 				<div class="inner">
 					<nav>
 						<ul>
-							<li><a href="#intro">Welcome</a></li>
-							<li><a href="#one">Who I am</a></li>
-							<li><a href="#two">What I do</a></li>
-							<li><a href="#three">Get in touch</a></li>
+							<li><a href="#intro" data-transition="elevator" data-direction="up">Welcome</a></li>
+							<li><a href="#one" data-transition="elevator" data-direction="down">Who I am</a></li>
+							<li><a href="#two" data-transition="elevator" data-direction="down">What I do</a></li>
+							<li><a href="#three" data-transition="elevator" data-direction="down">Get in touch</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -34,21 +67,28 @@
 			<div id="wrapper">
 
 				<!-- Intro -->
-					<section id="intro" class="wrapper style1 fullscreen fade-up">
+					<section id="intro" class="wrapper style1 fullscreen fade-up" data-elevator-section="intro">
 						<div class="inner">
-							<h1 class="fade-in-slide">Ryan Rousell</h1>
+							<h1 class="fade-in-slide" data-elevator-animate>Ryan Rousell</h1>
+							
+							<!-- Main welcome hologram -->
+							<div class="hologram-container main-hologram" id="welcome-hologram" 
+								data-hologram-container data-hologram-type="text" 
+								data-hologram-text="STARSHIP">
+							</div>
+							
 							<div class="animated-content">
-								<p class="fade-in-slide delay-3">I love the problem-solving aspects of software development and aspire to build expertise in cloud security, where I can combine my interests in secure architecture, AI implementation, and robust system design.</p>
-								<ul class="actions fade-in-slide delay-4">
-									<li><a href="#one" class="button scrolly">Explore my projects</a></li>
+								<p class="fade-in-slide delay-3" data-elevator-animate>I love the problem-solving aspects of software development and aspire to build expertise in cloud security, where I can combine my interests in secure architecture, AI implementation, and robust system design.</p>
+								<ul class="actions fade-in-slide delay-4" data-elevator-animate>
+									<li><a href="#one" class="button scrolly" data-transition="elevator" data-direction="down">Explore my projects</a></li>
 								</ul>
 							</div>
 						</div>
 					</section>
 
 				<!-- Projects Spotlight -->
-					<section id="one" class="wrapper style2 spotlights">
-						<section data-aos="fade-right" data-aos-duration="1000">
+					<section id="one" class="wrapper style2 spotlights" data-elevator-section="projects">
+						<section data-aos="fade-right" data-aos-duration="800" data-aos-once="false">
 							<a href="#" class="image"><img src="images/pic01.jpg" alt="" data-position="center center" /></a>
 							<div class="content">
 								<div class="inner">
@@ -68,7 +108,7 @@
 							</div>
 						</section>
 						
-						<section data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+						<section data-aos="fade-left" data-aos-duration="800" data-aos-delay="150" data-aos-once="false">
 							<a href="#" class="image"><img src="images/pic02.jpg" alt="" data-position="top center" /></a>
 							<div class="content">
 								<div class="inner">
@@ -88,7 +128,7 @@
 							</div>
 						</section>
 						
-						<section data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">
+						<section data-aos="fade-right" data-aos-duration="800" data-aos-delay="300" data-aos-once="false">
 							<a href="#" class="image"><img src="images/pic03.jpg" alt="" data-position="25% 25%" /></a>
 							<div class="content">
 								<div class="inner">
@@ -110,56 +150,77 @@
 					</section>
 
 				<!-- Two -->
-					<section id="two" class="wrapper style3 fade-up">
+					<section id="two" class="wrapper style3 fade-up" data-elevator-section="skills">
 						<div class="inner">
-							<h2 data-aos="fade-up">What I do</h2>
-							<p data-aos="fade-up" data-aos-delay="200">Combining technical expertise in software development with professional athletic experience, I bring a unique blend of skills to every project. My career is focused on creating secure, intelligent systems that solve real business problems at the intersection of AI/ML and cloud security. I'm committed to developing solutions that balance security with performance and usability.</p>
+							<h2 data-aos="fade-up" data-aos-once="false" data-elevator-animate data-aos-anchor-placement="top-center">What I do</h2>
+							<p data-aos="fade-up" data-aos-delay="150" data-aos-once="false">Combining technical expertise in software development with professional athletic experience, I bring a unique blend of skills to every project. My career is focused on creating secure, intelligent systems that solve real business problems at the intersection of AI/ML and cloud security. I'm committed to developing solutions that balance security with performance and usability.</p>
 							<p class="last-modified"><small>Last updated: April 16, 2025 | Content by Ryan Rousell</small></p>
+							
+							<!-- Skills hologram visualizations -->
+							<div class="hologram-grid">
+								<div class="hologram-container" id="ai-hologram" 
+									data-hologram-container data-hologram-type="geometry" 
+									data-geometry="sphere">
+								</div>
+								<div class="hologram-container" id="cloud-hologram" 
+									data-hologram-container data-hologram-type="geometry" 
+									data-geometry="cube">
+								</div>
+								<div class="hologram-container" id="code-hologram" 
+									data-hologram-container data-hologram-type="text" 
+									data-hologram-text="CODE">
+								</div>
+							</div>
+							
 							<div class="features">
-								<section data-aos="zoom-in" data-aos-delay="500">
+								<section data-aos="zoom-in" data-aos-delay="250" data-aos-once="false" data-elevator-stagger>
 									<span class="icon solid major fa-brain"></span>
 									<h3>AI & Machine Learning</h3>
+									<div class="mini-hologram-container" data-hologram-container data-hologram-type="geometry" data-geometry="octahedron"></div>
 									<p>Implemented vector embedding algorithms that achieved 95% matching accuracy on real-world data. Developed custom AI solutions that reduced manual processing time by over 80% while maintaining data security.</p>
 								</section>
-								<section data-aos="zoom-in" data-aos-delay="100">
+								<section data-aos="zoom-in" data-aos-delay="100" data-aos-once="false" data-elevator-stagger>
 									<span class="icon solid major fa-database"></span>
 									<h3>Database Management</h3>
+									<div class="mini-hologram-container" data-hologram-container data-hologram-type="geometry" data-geometry="tetrahedron"></div>
 									<p>Proficient in PostgreSQL, pgvector, and database design. Experience in data cleaning and optimization for AI applications.</p>
 								</section>
-								<section data-aos="zoom-in" data-aos-delay="200">
+								<section data-aos="zoom-in" data-aos-delay="150" data-aos-once="false" data-elevator-stagger>
 									<span class="icon solid major fa-code"></span>
 									<h3>Web Development</h3>
-									<p>Full-stack development using Vue.js, TypeScript, and PHP. Created responsive and dynamic web applications for various clients.</p>
+									<div class="mini-hologram-container" data-hologram-container data-hologram-type="geometry" data-geometry="torus"></div>
+									<p>Experienced in building responsive web applications with Vue, React, and traditional web technologies. Focus on clean code architecture and modern development practices.</p>
 								</section>
-								<section data-aos="zoom-in" data-aos-delay="300">
+								<section data-aos="zoom-in" data-aos-delay="200" data-aos-once="false" data-elevator-stagger>
 									<span class="icon solid major fa-cloud"></span>
 									<h3>Cloud Security</h3>
-									<p>Developing expertise in cloud security principles and practices, with a focus on secure cloud infrastructure and applications.</p>
+									<div class="mini-hologram-container" data-hologram-container data-hologram-type="geometry" data-geometry="icosahedron"></div>
+									<p>Designing secure cloud architectures with AWS and Azure. Implemented security best practices for data protection and compliance with industry standards.</p>
 								</section>
-								<section data-aos="zoom-in" data-aos-delay="400">
+								<section data-aos="zoom-in" data-aos-delay="250" data-aos-once="false" data-elevator-stagger>
 									<span class="icon solid major fa-laptop-code"></span>
 									<h3>Programming Languages</h3>
 									<p>Proficient in Python, Java, PHP, TypeScript, JavaScript, and SQL. Experience in both object-oriented and functional programming paradigms.</p>
 								</section>
-								<section data-aos="zoom-in" data-aos-delay="500">
+								<section data-aos="zoom-in" data-aos-delay="300" data-aos-once="false" data-elevator-stagger>
 									<span class="icon major fa-medal"></span>
 									<h3>Professional Athletics</h3>
 									<p>International level competitor in fencing, bringing discipline, strategic thinking, and performance under pressure to technical projects.</p>
 								</section>
 							</div>
-							<ul class="actions" data-aos="fade-up" data-aos-delay="600">
-								<li><a href="github-projects.html" class="button">Learn more</a></li>
+							<ul class="actions" data-aos="fade-up" data-aos-delay="300" data-aos-once="false">
+								<li><a href="github-projects.html" class="button" data-elevator-stagger>Learn more</a></li>
 							</ul>
 						</div>
 					</section>
 
 				<!-- Three -->
-					<section id="three" class="wrapper style1 fade-up">
+					<section id="three" class="wrapper style1 fade-up" data-elevator-section="contact">
 						<div class="inner">
-							<h2 data-aos="fade-up">Get in touch</h2>
-							<p data-aos="fade-up" data-aos-delay="200">I'm always interested in discussing new projects, opportunities, or collaborations. Feel free to reach out through any of the following methods:</p>
+							<h2 data-aos="fade-up" data-aos-once="false" data-elevator-animate data-aos-anchor-placement="top-center">Get in touch</h2>
+							<p data-aos="fade-up" data-aos-delay="150" data-aos-once="false">I'm always interested in discussing new projects, opportunities, or collaborations. Feel free to reach out through any of the following methods:</p>
 							<div class="split style1">
-								<section data-aos="fade-right" data-aos-delay="300">
+								<section data-aos="fade-right" data-aos-delay="200" data-aos-once="false" data-elevator-animate>
 									<form method="post" action="#">
 										<div class="fields">
 											<div class="field half">
@@ -180,7 +241,7 @@
 										</ul>
 									</form>
 								</section>
-								<section data-aos="fade-left" data-aos-delay="300">
+								<section data-aos="fade-left" data-aos-delay="200" data-aos-once="false" data-elevator-animate>
 									<ul class="contact">
 										<li>
 											<h3>Address</h3>
@@ -212,30 +273,32 @@
 			</div>
 
 		<!-- Footer -->
-			<footer id="footer" class="wrapper style1-alt">
+			<footer id="footer" class="wrapper style1-alt" data-elevator-section="footer">
 				<div class="inner">
 					<ul class="menu">
-						<li>&copy; Ryan Rousell. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>&copy; Ryan Rousell. All rights reserved.</li><li>
 					</ul>
 				</div>
 			</footer>
-
 		<!-- Scripts -->
-			<script src="assets/libs/aos/aos.js"></script>
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<!-- jQuery is loaded from CDN and made available to Vite -->
+			<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+			
+			<!-- Main Application Script (imports all other dependencies) -->
+			<script type="module" src="./assets/js/main.js"></script>
+			
 			<script>
-				// Initialize AOS
-				AOS.init({
-					duration: 800,
-					easing: 'ease-in-out',
-					once: true,
-					mirror: false
+				// Add sci-fi theme class to ensure it takes precedence
+				document.addEventListener('DOMContentLoaded', function() {
+					document.documentElement.classList.add('sci-fi-theme');
+					document.body.classList.add('sci-fi-theme');
+					
+					// Additional theme class for wrappers and sections
+					document.querySelectorAll('.wrapper, .section, .spotlights').forEach(el => {
+						el.classList.add('sci-fi-theme');
+					});
+					
+					console.log('Applied sci-fi theme classes to all elements');
 				});
 			</script>
 	</body>

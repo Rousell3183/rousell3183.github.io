@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"],
+      "@assets/*": ["./assets/*"],
+      "@js/*": ["./assets/js/*"],
+      "@css/*": ["./assets/css/*"],
+      "@sounds/*": ["./assets/sounds/*"],
+      "@images/*": ["./assets/images/*"],
+      "@modules/*": ["./assets/js/modules/*"],
+      "@effects/*": ["./assets/js/effects/*"],
+      "@libs/*": ["./assets/libs/*"]
+    },
+    "jsx": "preserve",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "checkJs": false
+  },
+  "include": [
+    "assets/**/*.js",
+    "assets/**/*.jsx",
+    "assets/**/*.ts",
+    "assets/**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}
+
