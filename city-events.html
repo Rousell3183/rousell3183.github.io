@@ -1,124 +1,196 @@
 <!DOCTYPE HTML>
-<html>
+<html class="sci-fi-theme">
 	<head>
-		<title>City Event App - Ryan Rousell</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="last-modified" content="April 16, 2025" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="assets/css/base.css" />
-		<link rel="stylesheet" href="assets/css/layout.css" />
-		<link rel="stylesheet" href="assets/css/sci-fi-theme.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<title>Ryan Rousell's Portfolio</title>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+		<meta name="last-modified" content="April 16, 2025"/>
+		<!-- Load fonts for sci-fi theme -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500&display=swap">
+		<!-- CSS files in proper cascade order -->
+		<link rel="stylesheet" href="assets/css/fontawesome-all.min.css"/>
+		<link rel="stylesheet" href="assets/css/base.css"/>
+		<link rel="stylesheet" href="assets/css/layout.css"/>
+		<link rel="stylesheet" href="assets/css/sci-fi-theme.css"/>
+		<noscript>
+			<link rel="stylesheet" href="assets/css/noscript.css"/>
+		</noscript>
+		<style>
+			/* High-priority overrides to ensure sci-fi theme takes precedence */
+			.sci-fi-theme.is-preload *,
+			.sci-fi-theme.is-preload *:before,
+			.sci-fi-theme.is-preload *:after {
+				animation: none !important;
+				transition: none !important;
+			}
+			/* Contact section layout improvements (shared with index) */
+			#three .split {
+				display: flex;
+				flex-direction: row;
+				gap: 4vw;
+				justify-content: center;
+				align-items: stretch;
+				width: 100%;
+				max-width: 1100px;
+			}
+			#three .split > section {
+				background: rgba(10,22,49,0.85);
+				border-radius: 1.2rem;
+				box-shadow: 0 8px 32px 0 rgba(31,38,135,0.15);
+				padding: 2.5rem 2rem;
+				flex: 1 1 0;
+				min-width: 320px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+			#three form .fields {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 1.2rem 2rem;
+			}
+			#three form .field.half {
+				flex: 1 1 45%;
+				min-width: 140px;
+			}
+			#three form .field {
+				margin-bottom: 1.2rem;
+			}
+			#three form .actions {
+				margin-top: 1.5rem;
+			}
+			#three .contact {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+			}
+			#three .contact li {
+				margin-bottom: 1.5rem;
+			}
+			#three .contact h3 {
+				margin-bottom: 0.3rem;
+				font-size: 1.15em;
+			}
+			#three .contact .icons {
+				display: flex;
+				gap: 1.2rem;
+			}
+			@media (max-width: 900px) {
+				#three .split {
+					flex-direction: column;
+					gap: 2rem;
+					align-items: stretch;
+				}
+			}
+			@media (max-width: 600px) {
+				#three .split > section {
+					padding: 1.2rem 0.6rem;
+				}
+			}
+		</style>
 	</head>
-	<body class="is-preload">
-	<!-- Header -->
-			<header id="header">
-				<a href="index.html" class="title">My Portfolio</a>
+	<body class="is-preload sci-fi-theme">
+	<!-- Sidebar -->
+		<section id="sidebar">
+			<div class="inner">
 				<nav>
 					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="city-events.html" class="active">City Events App</a></li>
+						<li><a href="index.html#intro">Welcome</a></li>
+						<li><a href="index.html#one">Who I am</a></li>
+						<li><a href="index.html#two">What I do</a></li>
+						<li><a href="index.html#three">Get in touch</a></li>
 					</ul>
 				</nav>
-			</header>
+			</div>
+		</section>
 
-		<!-- Wrapper -->
-			<main data-barba="wrapper">
-				<div id="wrapper" class="wrapper">
+	<!-- Main content wrapper for Barba.js compatibility -->
+		<main data-barba="wrapper">
+			<div id="wrapper">
+				<section id="main" class="wrapper style1 fade-up">
+					<div class="inner">
+						<h1 class="major">City Event Management Application</h1>
+						<span class="image fit"><img src="images/pic04.jpg" alt="City Events App Screenshot" /></span>
+						<h2>Project Purpose and Vision</h2>
+						<p>Developed a dynamic city event management platform for Zu.com that allows users to discover, create, and manage local events. The application provides a seamless interface for event organizers and attendees, enhancing community engagement and event participation throughout the city. This project demonstrates my ability to create modern web applications that solve real business challenges while enhancing community connections.</p>
+						<h2>Technical Skills Demonstrated</h2>
+						<p>This full-stack application showcases my expertise in modern web development:</p>
+						<ul>
+							<li><strong>Vue 3 & TypeScript</strong> - Leveraged advanced frontend frameworks to create responsive, type-safe applications with optimal performance</li>
+							<li><strong>Full-Stack Development</strong> - Built both user-facing interfaces and backend systems using PHP and RESTful API architecture</li>
+							<li><strong>UI/UX Design</strong> - Implemented Material Design principles through MUI Library to create intuitive user experiences</li>
+							<li><strong>Database Optimization</strong> - Designed efficient data structures and queries to support high-volume event listings and searches</li>
+							<li><strong>Responsive Web Design</strong> - Created adaptive layouts that provide consistent experiences across all device types</li>
+						</ul>
+						<h2>Professional Contributions</h2>
+						<p>I led key aspects of this project that demonstrated both technical expertise and project leadership:</p>
+						<ul>
+							<li><strong>Frontend Architecture</strong> - Designed the component structure and state management strategy for a complex application</li>
+							<li><strong>Location Services Integration</strong> - Implemented interactive map functionality for intuitive geographic event discovery</li>
+							<li><strong>Search Algorithm Development</strong> - Created advanced filtering capabilities with optimized database queries</li>
+							<li><strong>Authentication System</strong> - Built secure user management with role-based access controls</li>
+							<li><strong>Technical Documentation</strong> - Developed comprehensive documentation to support ongoing maintenance and feature additions</li>
+						</ul>
+						<h2>Problem-Solving Approach</h2>
+						<p>During development, I demonstrated problem-solving skills by addressing complex challenges:</p>
+						<ul>
+							<li>Identified and resolved performance bottlenecks in search functionality, improving query times by 70%</li>
+							<li>Engineered efficient state management patterns to maintain responsiveness with complex nested components</li>
+							<li>Created a progressive enhancement strategy that ensured functionality across various device capabilities</li>
+							<li>Implemented comprehensive error handling with user-friendly recovery paths to enhance overall experience</li>
+							<li>Developed automated testing protocols to ensure feature reliability across platform updates</li>
+						</ul>
+						<h2>Business Impact and Outcomes</h2>
+						<p>The project delivered measurable value to both Zu.com and the local community:</p>
+						<ul>
+							<li>Increased event participation rates by approximately 40%, resulting in an estimated $150,000 additional revenue for local businesses</li>
+							<li>Streamlined the event creation process, reducing organizer time investment by 60% (from 45 minutes to 18 minutes on average)</li>
+							<li>Improved user engagement metrics with 35% longer session durations and 28% increase in return visits</li>
+							<li>Reduced customer support inquiries by 45% through intuitive interface design and proactive notification systems</li>
+							<li>Created a scalable platform architecture that has since been successfully deployed in three additional cities</li>
+						</ul>
+						<h2>Professional Growth and Reflection</h2>
+						<p>This project represented a significant milestone in my development as a software engineer:</p>
+						<ul>
+							<li>Strengthened my expertise in modern JavaScript frameworks and TypeScript development</li>
+							<li>Developed a deeper understanding of user-centered design principles and their impact on application success</li>
+							<li>Enhanced project management skills through coordinating cross-functional development activities</li>
+							<li>Gained valuable experience in translating business requirements into technical specifications</li>
+							<li>Refined my approach to creating modular, maintainable code that supports ongoing enhancement</li>
+						</ul>
+						<p>The skills developed during this project align directly with my career goals in full-stack web development. My ability to create engaging, performant applications that deliver measurable business value demonstrates my readiness for increasingly complex development challenges. The project showcases not only technical proficiency but also my understanding of how technology can enhance community connection and business success.</p>
+						<p class="last-modified"><small>Last updated: April 16, 2025 | Content by Ryan Rousell</small></p>
+					</div>
+				</section>
+			</div>
+		</main>
 
-					<!-- Main -->
-						<section id="main" class="wrapper">
-							<div class="inner">
-								<h1 class="major">City Event Management Application</h1>
-								<span class="image fit"><img src="images/pic04.jpg" alt="City Events App Screenshot" /></span>
-								
-								<h2>Project Purpose and Vision</h2>
-								<p>Developed a dynamic city event management platform for Zu.com that allows users to discover, create, and manage local events. The application provides a seamless interface for event organizers and attendees, enhancing community engagement and event participation throughout the city. This project demonstrates my ability to create modern web applications that solve real business challenges while enhancing community connections.</p>
-								
-								<h2>Technical Skills Demonstrated</h2>
-								<p>This full-stack application showcases my expertise in modern web development:</p>
-								<ul>
-									<li><strong>Vue 3 & TypeScript</strong> - Leveraged advanced frontend frameworks to create responsive, type-safe applications with optimal performance</li>
-									<li><strong>Full-Stack Development</strong> - Built both user-facing interfaces and backend systems using PHP and RESTful API architecture</li>
-									<li><strong>UI/UX Design</strong> - Implemented Material Design principles through MUI Library to create intuitive user experiences</li>
-									<li><strong>Database Optimization</strong> - Designed efficient data structures and queries to support high-volume event listings and searches</li>
-									<li><strong>Responsive Web Design</strong> - Created adaptive layouts that provide consistent experiences across all device types</li>
-								</ul>
-								
-								<h2>Professional Contributions</h2>
-								<p>I led key aspects of this project that demonstrated both technical expertise and project leadership:</p>
-								<ul>
-									<li><strong>Frontend Architecture</strong> - Designed the component structure and state management strategy for a complex application</li>
-									<li><strong>Location Services Integration</strong> - Implemented interactive map functionality for intuitive geographic event discovery</li>
-									<li><strong>Search Algorithm Development</strong> - Created advanced filtering capabilities with optimized database queries</li>
-									<li><strong>Authentication System</strong> - Built secure user management with role-based access controls</li>
-									<li><strong>Technical Documentation</strong> - Developed comprehensive documentation to support ongoing maintenance and feature additions</li>
-								</ul>
-								
-								<h2>Problem-Solving Approach</h2>
-								<p>During development, I demonstrated problem-solving skills by addressing complex challenges:</p>
-								<ul>
-									<li>Identified and resolved performance bottlenecks in search functionality, improving query times by 70%</li>
-									<li>Engineered efficient state management patterns to maintain responsiveness with complex nested components</li>
-									<li>Created a progressive enhancement strategy that ensured functionality across various device capabilities</li>
-									<li>Implemented comprehensive error handling with user-friendly recovery paths to enhance overall experience</li>
-									<li>Developed automated testing protocols to ensure feature reliability across platform updates</li>
-								</ul>
-								
-								<h2>Business Impact and Outcomes</h2>
-								<p>The project delivered measurable value to both Zu.com and the local community:</p>
-								<ul>
-									<li>Increased event participation rates by approximately 40%, resulting in an estimated $150,000 additional revenue for local businesses</li>
-									<li>Streamlined the event creation process, reducing organizer time investment by 60% (from 45 minutes to 18 minutes on average)</li>
-									<li>Improved user engagement metrics with 35% longer session durations and 28% increase in return visits</li>
-									<li>Reduced customer support inquiries by 45% through intuitive interface design and proactive notification systems</li>
-									<li>Created a scalable platform architecture that has since been successfully deployed in three additional cities</li>
-								</ul>
-								
-								<h2>Professional Growth and Reflection</h2>
-								<p>This project represented a significant milestone in my development as a software engineer:</p>
-								<ul>
-									<li>Strengthened my expertise in modern JavaScript frameworks and TypeScript development</li>
-									<li>Developed a deeper understanding of user-centered design principles and their impact on application success</li>
-									<li>Enhanced project management skills through coordinating cross-functional development activities</li>
-									<li>Gained valuable experience in translating business requirements into technical specifications</li>
-									<li>Refined my approach to creating modular, maintainable code that supports ongoing enhancement</li>
-								</ul>
-								<p>The skills developed during this project align directly with my career goals in full-stack web development. My ability to create engaging, performant applications that deliver measurable business value demonstrates my readiness for increasingly complex development challenges. The project showcases not only technical proficiency but also my understanding of how technology can enhance community connection and business success.</p>
-								<p class="last-modified"><small>Last updated: April 16, 2025 | Content by Ryan Rousell</small></p>
-							</div>
-						</section>
+	<!-- Footer -->
+		<footer id="footer" class="wrapper alt">
+			<div class="inner">
+				<ul class="menu">
+					<li>&copy; Ryan Rousell. All rights reserved.</li>
+				</ul>
+			</div>
+		</footer>
 
-				</div>
-			</main>
-
-		<!-- Footer -->
-			<footer id="footer" class="wrapper alt">
-				<div class="inner">
-					<ul class="menu">
-						<li>&copy; Ryan Rousell. All rights reserved.</li>
-					</ul>
-				</div>
-			</footer>
-
-		<!-- Scripts -->
-			<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-			<script type="module" src="./assets/js/main.js"></script>
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
-			<script src="assets/doorTransition.js"></script>
-			<script>
-			  document.addEventListener('DOMContentLoaded', function () {
-				document.documentElement.classList.add('sci-fi-theme');
-				document.body.classList.add('sci-fi-theme');
-				document.querySelectorAll('.wrapper, .section, .spotlights').forEach(el => {
-				  el.classList.add('sci-fi-theme');
-				});
-			  });
-			  DoorTransition.ensureOverlay();
-			  DoorTransition.playOpenOnLoad();
-			  DoorTransition.enableOnLinks();
-			</script>
+	<!-- Scripts -->
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+		<script type="module" src="./assets/js/main.js"></script>
+		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script> -->
+		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script> -->
+		<!-- <script src="assets/doorTransition.js"></script> -->
+		<script>
+		  document.addEventListener('DOMContentLoaded', function () {
+			document.documentElement.classList.add('sci-fi-theme');
+			document.body.classList.add('sci-fi-theme');
+			document.querySelectorAll('.wrapper, .section, .spotlights').forEach(el => {
+			  el.classList.add('sci-fi-theme');
+			});
+		  });
+		  // DoorTransition.ensureOverlay();
+		  // DoorTransition.playOpenOnLoad();
+		  // DoorTransition.enableOnLinks();
+		</script>
 	</body>
 </html>

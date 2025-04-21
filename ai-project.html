@@ -1,114 +1,191 @@
 <!DOCTYPE HTML>
-<html>
+<html class="sci-fi-theme">
 	<head>
-		<title>Prestige Lock and Door - AI Product Matching</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="last-modified" content="April 16, 2025" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="assets/css/base.css" />
-		<link rel="stylesheet" href="assets/css/layout.css" />
-		<link rel="stylesheet" href="assets/css/sci-fi-theme.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<title>Ryan Rousell's Portfolio</title>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+		<meta name="last-modified" content="April 16, 2025"/>
+		<!-- Load fonts for sci-fi theme -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500&display=swap">
+		<!-- CSS files in proper cascade order -->
+		<link rel="stylesheet" href="assets/css/fontawesome-all.min.css"/>
+		<link rel="stylesheet" href="assets/css/base.css"/>
+		<link rel="stylesheet" href="assets/css/layout.css"/>
+		<link rel="stylesheet" href="assets/css/sci-fi-theme.css"/>
+		<noscript>
+			<link rel="stylesheet" href="assets/css/noscript.css"/>
+		</noscript>
+		<style>
+			/* High-priority overrides to ensure sci-fi theme takes precedence */
+			.sci-fi-theme.is-preload *,
+			.sci-fi-theme.is-preload *:before,
+			.sci-fi-theme.is-preload *:after {
+				animation: none !important;
+				transition: none !important;
+			}
+			/* Contact section layout improvements (shared with index) */
+			#three .split {
+				display: flex;
+				flex-direction: row;
+				gap: 4vw;
+				justify-content: center;
+				align-items: stretch;
+				width: 100%;
+				max-width: 1100px;
+			}
+			#three .split > section {
+				background: rgba(10,22,49,0.85);
+				border-radius: 1.2rem;
+				box-shadow: 0 8px 32px 0 rgba(31,38,135,0.15);
+				padding: 2.5rem 2rem;
+				flex: 1 1 0;
+				min-width: 320px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+			#three form .fields {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 1.2rem 2rem;
+			}
+			#three form .field.half {
+				flex: 1 1 45%;
+				min-width: 140px;
+			}
+			#three form .field {
+				margin-bottom: 1.2rem;
+			}
+			#three form .actions {
+				margin-top: 1.5rem;
+			}
+			#three .contact {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+			}
+			#three .contact li {
+				margin-bottom: 1.5rem;
+			}
+			#three .contact h3 {
+				margin-bottom: 0.3rem;
+				font-size: 1.15em;
+			}
+			#three .contact .icons {
+				display: flex;
+				gap: 1.2rem;
+			}
+			@media (max-width: 900px) {
+				#three .split {
+					flex-direction: column;
+					gap: 2rem;
+					align-items: stretch;
+				}
+			}
+			@media (max-width: 600px) {
+				#three .split > section {
+					padding: 1.2rem 0.6rem;
+				}
+			}
+		</style>
 	</head>
-	<body class="is-preload">
-	<!-- Header -->
-			<header id="header">
-				<a href="index.html" class="title">My Portfolio</a>
-				<nav>
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="ai-project.html" class="active">AI Project</a></li>
-					</ul>
-				</nav>
-			</header>
-
-		<!-- Wrapper -->
-			<main data-barba="wrapper">
-				<div id="wrapper" class="wrapper">
-
-					<!-- Main -->
-						<section id="main" class="wrapper section">
-							<div class="inner">
-								<h1 class="major">Prestige Lock and Door - AI-Powered Product Matching System</h1>
-								<span class="image fit"><img src="images/pic04.jpg" alt="AI Project Screenshot" /></span>
-								
-								<h2>Project Purpose and Scope</h2>
-								<p>Developed a sophisticated web application for Prestige Lock and Door that automates the tedious process of matching products from supplier flyers with items in their inventory database. This AI-driven solution significantly reduced manual work and improved accuracy in product identification and pricing. The project demonstrates my skills in creating practical applications of artificial intelligence for solving real-world business problems.</p>
-								
-								<h2>Professional Contributions</h2>
-								<p>I led key aspects of this project that showcased my technical abilities and leadership skills:</p>
-								<ul>
-									<li><strong>AI Algorithm Development</strong> - Designed and implemented vector embedding matching algorithms that significantly improved product identification accuracy</li>
-									<li><strong>Security Implementation</strong> - Created a robust login and authentication system to protect sensitive business data</li>
-									<li><strong>Infrastructure Engineering</strong> - Developed Docker containerization solutions for consistent deployment and scaling</li>
-									<li><strong>Cross-functional Collaboration</strong> - Worked with business stakeholders to translate requirements into technical solutions</li>
-									<li><strong>UX Design</strong> - Contributed to interface design that balanced technical capability with ease of use</li>
-								</ul>
-								
-								<h2>Technical Challenges Overcome</h2>
-								<p>This project presented several complex challenges that I successfully addressed:</p>
-								<ul>
-									<li>Developed custom vector embedding algorithms to overcome the limitations of off-the-shelf solutions</li>
-									<li>Created an innovative approach to text similarity matching that handled industry-specific terminology</li>
-									<li>Implemented efficient database architecture to handle large product catalogs while maintaining performance</li>
-									<li>Balanced algorithm sensitivity to enable accurate matching without excessive false positives</li>
-									<li>Integrated multiple data sources with different formats and quality levels into a unified system</li>
-								</ul>
-								
-								<h2>Business Impact and Outcomes</h2>
-								<p>This project delivered transformative results for Prestige Lock and Door:</p>
-								<ul>
-									<li>Reduced product matching time by approximately 85%, saving over 20 hours of staff time weekly</li>
-									<li>Improved matching accuracy from ~70% to over 95%, reducing pricing errors and customer issues</li>
-									<li>Enabled staff to focus on higher-value tasks, resulting in a 15% increase in sales follow-up activities</li>
-									<li>Decreased time-to-market for new supplier offerings by 60%</li>
-									<li>Created a scalable system that has successfully adapted to three new supplier integrations</li>
-								</ul>
-								
-								<h2>Professional Growth and Reflection</h2>
-								<p>This project represented a significant milestone in my professional development:</p>
-								<ul>
-									<li>Deepened my expertise in AI applications for business process automation</li>
-									<li>Enhanced my ability to communicate complex technical concepts to non-technical stakeholders</li>
-									<li>Developed leadership skills through coordinating cross-functional aspects of the project</li>
-									<li>Built confidence in my ability to architect end-to-end solutions from conception to deployment</li>
-									<li>Refined my approach to balancing technical excellence with practical business requirements</li>
-								</ul>
-								<p>Through this project, I demonstrated my ability to leverage cutting-edge technology to solve real business problems. The skills developed are directly applicable to my career goals in software engineering and artificial intelligence, where I aim to create solutions that combine technical innovation with practical business value.</p>
-								<p class="last-modified"><small>Last updated: April 16, 2025 | Content by Ryan Rousell</small></p>
-							</div>
-						</section>
-
-				</div>
-			</main>
-
-		<!-- Footer -->
-			<footer id="footer" class="wrapper alt">
+	<body class="is-preload sci-fi-theme">
+	<!-- Sidebar -->
+	<section id="sidebar">
+		<div class="inner">
+			<nav>
+				<ul>
+					<li><a href="index.html#intro">Welcome</a></li>
+					<li><a href="index.html#one">Who I am</a></li>
+					<li><a href="index.html#two">What I do</a></li>
+					<li><a href="index.html#three">Get in touch</a></li>
+				</ul>
+			</nav>
+		</div>
+	</section>
+	<!-- Main content wrapper for Barba.js compatibility -->
+	<main data-barba="wrapper">
+		<div id="wrapper">
+			<section id="main" class="wrapper style1 fade-up">
 				<div class="inner">
-					<ul class="menu">
-						<li>&copy; Ryan Rousell. All rights reserved.</li>
+					<h1 class="major">Prestige Lock and Door - AI-Powered Product Matching System</h1>
+					<span class="image fit"><img src="images/pic04.jpg" alt="AI Project Screenshot" /></span>
+					
+					<h2>Project Purpose and Scope</h2>
+					<p>Developed a sophisticated web application for Prestige Lock and Door that automates the tedious process of matching products from supplier flyers with items in their inventory database. This AI-driven solution significantly reduced manual work and improved accuracy in product identification and pricing. The project demonstrates my skills in creating practical applications of artificial intelligence for solving real-world business problems.</p>
+					
+					<h2>Professional Contributions</h2>
+					<p>I led key aspects of this project that showcased my technical abilities and leadership skills:</p>
+					<ul>
+						<li><strong>AI Algorithm Development</strong> - Designed and implemented vector embedding matching algorithms that significantly improved product identification accuracy</li>
+						<li><strong>Security Implementation</strong> - Created a robust login and authentication system to protect sensitive business data</li>
+						<li><strong>Infrastructure Engineering</strong> - Developed Docker containerization solutions for consistent deployment and scaling</li>
+						<li><strong>Cross-functional Collaboration</strong> - Worked with business stakeholders to translate requirements into technical solutions</li>
+						<li><strong>UX Design</strong> - Contributed to interface design that balanced technical capability with ease of use</li>
 					</ul>
+					
+					<h2>Technical Challenges Overcome</h2>
+					<p>This project presented several complex challenges that I successfully addressed:</p>
+					<ul>
+						<li>Developed custom vector embedding algorithms to overcome the limitations of off-the-shelf solutions</li>
+						<li>Created an innovative approach to text similarity matching that handled industry-specific terminology</li>
+						<li>Implemented efficient database architecture to handle large product catalogs while maintaining performance</li>
+						<li>Balanced algorithm sensitivity to enable accurate matching without excessive false positives</li>
+						<li>Integrated multiple data sources with different formats and quality levels into a unified system</li>
+					</ul>
+					
+					<h2>Business Impact and Outcomes</h2>
+					<p>This project delivered transformative results for Prestige Lock and Door:</p>
+					<ul>
+						<li>Reduced product matching time by approximately 85%, saving over 20 hours of staff time weekly</li>
+						<li>Improved matching accuracy from ~70% to over 95%, reducing pricing errors and customer issues</li>
+						<li>Enabled staff to focus on higher-value tasks, resulting in a 15% increase in sales follow-up activities</li>
+						<li>Decreased time-to-market for new supplier offerings by 60%</li>
+						<li>Created a scalable system that has successfully adapted to three new supplier integrations</li>
+					</ul>
+					
+					<h2>Professional Growth and Reflection</h2>
+					<p>This project represented a significant milestone in my professional development:</p>
+					<ul>
+						<li>Deepened my expertise in AI applications for business process automation</li>
+						<li>Enhanced my ability to communicate complex technical concepts to non-technical stakeholders</li>
+						<li>Developed leadership skills through coordinating cross-functional aspects of the project</li>
+						<li>Built confidence in my ability to architect end-to-end solutions from conception to deployment</li>
+						<li>Refined my approach to balancing technical excellence with practical business requirements</li>
+					</ul>
+					<p>Through this project, I demonstrated my ability to leverage cutting-edge technology to solve real business problems. The skills developed are directly applicable to my career goals in software engineering and artificial intelligence, where I aim to create solutions that combine technical innovation with practical business value.</p>
+					<p class="last-modified"><small>Last updated: April 16, 2025 | Content by Ryan Rousell</small></p>
 				</div>
-			</footer>
+			</section>
+		</div>
+	</main>
 
-		<!-- Scripts -->
-			<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-			<script type="module" src="./assets/js/main.js"></script>
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
-			<script src="assets/doorTransition.js"></script>
-			<script>
-			  document.addEventListener('DOMContentLoaded', function () {
-				document.documentElement.classList.add('sci-fi-theme');
-				document.body.classList.add('sci-fi-theme');
-				document.querySelectorAll('.wrapper, .section, .spotlights').forEach(el => {
-				  el.classList.add('sci-fi-theme');
-				});
-			  });
-			  DoorTransition.ensureOverlay();
-			  DoorTransition.playOpenOnLoad();
-			  DoorTransition.enableOnLinks();
-			</script>
-	</body>
+	<!-- Footer -->
+	<footer id="footer" class="wrapper alt">
+		<div class="inner">
+			<ul class="menu">
+				<li>&copy; Ryan Rousell. All rights reserved.</li>
+			</ul>
+		</div>
+	</footer>
+
+	<!-- Scripts -->
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script type="module" src="./assets/js/main.js"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script> -->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script> -->
+	<!-- <script src="assets/doorTransition.js"></script> -->
+	<script>
+	  document.addEventListener('DOMContentLoaded', function () {
+		document.documentElement.classList.add('sci-fi-theme');
+		document.body.classList.add('sci-fi-theme');
+		document.querySelectorAll('.wrapper, .section, .spotlights').forEach(el => {
+		  el.classList.add('sci-fi-theme');
+		});
+	  });
+	  // DoorTransition.ensureOverlay();
+	  // DoorTransition.playOpenOnLoad();
+	  // DoorTransition.enableOnLinks();
+	</script>
+</body>
 </html>

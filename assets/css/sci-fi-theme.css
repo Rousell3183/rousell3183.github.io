@@ -959,3 +959,9 @@ body.is-preload .wrapper > .inner {
   visibility: visible !important;
   transform: none !important;
 }
+
+/* Add margin-top to .actions (button container) to fix overlap between text and buttons */
+.sci-fi-theme .actions,
+body.sci-fi-theme .actions {
+  margin-top: 2em !important;
+}
