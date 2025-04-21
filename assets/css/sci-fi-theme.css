@@ -9,89 +9,89 @@
    ============================================ */
 :root {
   /* Primary colors */
-  --color-primary: #00c8ff !important;
-  --color-secondary: #7b35e5 !important;
-  --color-tertiary: #fe5578 !important;
+  --color-primary: #00c8ff ;
+  --color-secondary: #7b35e5 ;
+  --color-tertiary: #fe5578 ;
   
   /* Background colors */
-  --color-background: #0a1631 !important;
-  --color-background-dark: #070d1a !important;
-  --color-background-light: #0d2a4f !important;
+  --color-background: #0a1631 ;
+  --color-background-dark: #070d1a ;
+  --color-background-light: #0d2a4f ;
   
   /* Text colors */
-  --color-text: #e6f1ff !important;
-  --color-text-dim: #95add1 !important;
-  --color-text-bright: #ffffff !important;
+  --color-text: #e6f1ff ;
+  --color-text-dim: #95add1 ;
+  --color-text-bright: #ffffff ;
   
   /* Special effects colors */
-  --color-glow: #00c8ff !important;
-  --color-warning: #ffcc00 !important;
-  --color-error: #ff3d3d !important;
-  --color-success: #00c287 !important;
+  --color-glow: #00c8ff ;
+  --color-warning: #ffcc00 ;
+  --color-error: #ff3d3d ;
+  --color-success: #00c287 ;
   
   /* Accent colors */
-  --color-accent-1: #7b35e5 !important;
-  --color-accent-2: #fe5578 !important;
-  --color-accent-3: #00c287 !important;
+  --color-accent-1: #7b35e5 ;
+  --color-accent-2: #fe5578 ;
+  --color-accent-3: #00c287 ;
   
   /* UI colors */
-  --color-ui-panel: rgba(10, 22, 49, 0.8) !important;
-  --color-ui-panel-border: rgba(0, 200, 255, 0.3) !important;
+  --color-ui-panel: rgba(10, 22, 49, 0.8) ;
+  --color-ui-panel-border: rgba(0, 200, 255, 0.3) ;
   
   /* Gradients */
-  --gradient-primary: linear-gradient(135deg, var(--color-primary), var(--color-secondary)) !important;
-  --gradient-interface: linear-gradient(180deg, var(--color-background-light), var(--color-background-dark)) !important;
-  --gradient-button: linear-gradient(90deg, rgba(0, 200, 255, 0.1), rgba(0, 200, 255, 0.3)) !important;
+  --gradient-primary: linear-gradient(135deg, var(--color-primary), var(--color-secondary)) ;
+  --gradient-interface: linear-gradient(180deg, var(--color-background-light), var(--color-background-dark)) ;
+  --gradient-button: linear-gradient(90deg, rgba(0, 200, 255, 0.1), rgba(0, 200, 255, 0.3)) ;
   
   /* Overlays */
-  --overlay-dark: rgba(0, 7, 20, 0.7) !important;
-  --overlay-scanline: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEElEQVQYV2NkYGD4z8DAwMgAAM0/B5cGP9gAAAAASUVORK5CYII=') !important;
+  --overlay-dark: rgba(0, 7, 20, 0.7) ;
+  --overlay-scanline: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEElEQVQYV2NkYGD4z8DAwMgAAM0/B5cGP9gAAAAASUVORK5CYII=') ;
   
   /* Typography */
-  --font-primary: 'Rajdhani', 'Orbitron', sans-serif !important;
-  --font-secondary: 'Roboto Mono', monospace !important;
-  --font-display: 'Orbitron', 'Rajdhani', sans-serif !important;
+  --font-primary: 'Rajdhani', 'Orbitron', sans-serif ;
+  --font-secondary: 'Roboto Mono', monospace ;
+  --font-display: 'Orbitron', 'Rajdhani', sans-serif ;
   
   /* Spacing */
-  --space-xs: 0.25rem !important;
-  --space-sm: 0.5rem !important;
-  --space-md: 1rem !important;
-  --space-lg: 2rem !important;
-  --space-xl: 4rem !important;
+  --space-xs: 0.25rem ;
+  --space-sm: 0.5rem ;
+  --space-md: 1rem ;
+  --space-lg: 2rem ;
+  --space-xl: 4rem ;
   
   /* Border radius */
-  --radius-sm: 2px !important;
-  --radius-md: 4px !important;
-  --radius-lg: 8px !important;
+  --radius-sm: 2px ;
+  --radius-md: 4px ;
+  --radius-lg: 8px ;
   
   /* Transitions */
-  --transition-fast: 150ms ease !important;
-  --transition-medium: 300ms ease !important;
-  --transition-slow: 600ms cubic-bezier(0.19, 1, 0.22, 1) !important;
+  --transition-fast: 150ms ease ;
+  --transition-medium: 300ms ease ;
+  --transition-slow: 600ms cubic-bezier(0.19, 1, 0.22, 1) ;
   
   /* Z-index layers */
-  --z-background: -10 !important;
-  --z-default: 1 !important;
-  --z-header: 100 !important;
-  --z-overlay: 200 !important;
-  --z-modal: 300 !important;
-  --z-tooltip: 400 !important;
-  --z-hologram: 50 !important;
+  --z-background: -10 ;
+  --z-default: 1 ;
+  --z-header: 100 ;
+  --z-overlay: 200 ;
+  --z-modal: 300 ;
+  --z-tooltip: 400 ;
+  --z-hologram: 50 ;
   
   /* Borders */
-  --border-glow: 0 0 10px var(--color-glow) !important;
-  --border-thin: 1px solid var(--color-ui-panel-border) !important;
-  --border-accent: 1px solid var(--color-primary) !important;
+  --border-glow: 0 0 10px var(--color-glow) ;
+  --border-thin: 1px solid var(--color-ui-panel-border) ;
+  --border-accent: 1px solid var(--color-primary) ;
   
   /* Shadows */
-  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.4) !important;
-  --shadow-md: 0 5px 15px rgba(0, 0, 0, 0.5) !important;
-  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.6) !important;
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.4) ;
+  --shadow-md: 0 5px 15px rgba(0, 0, 0, 0.5) ;
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.6) ;
   
   /* Element sizes */
-  --header-height: 70px !important;
-  --sidebar-width: 280px !important;
-  --hologram-container-height: 300px !important;
+  --header-height: 70px ;
+  --sidebar-width: 280px ;
+  --hologram-container-height: 300px ;
 }
 
 /* ============================================
@@ -99,33 +99,33 @@
    ============================================ */
 html.sci-fi-theme,
 html.sci-fi-theme body {
-  background-color: var(--color-background-dark) !important;
-  color: var(--color-text) !important;
-  font-family: var(--font-primary) !important;
+  background-color: var(--color-background-dark) ;
+  color: var(--color-text) ;
+  font-family: var(--font-primary) ;
 }
 
 body.sci-fi-theme {
-  font-family: var(--font-primary) !important;
-  background: var(--gradient-interface) !important;
-  color: var(--color-text) !important;
-  overflow-x: hidden !important;
-  transition: background-color var(--transition-slow) !important;
-  position: relative !important;
-  line-height: 1.6 !important;
+  font-family: var(--font-primary) ;
+  background: var(--gradient-interface) ;
+  color: var(--color-text) ;
+  overflow-x: hidden ;
+  transition: background-color var(--transition-slow) ;
+  position: relative ;
+  line-height: 1.6 ;
 }
 
 /* Scanline overlay effect */
 body.sci-fi-theme::before {
-  content: '' !important;
-  position: fixed !important;
-  top: 0 !important;
-  left: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
-  background-image: var(--overlay-scanline) !important;
-  opacity: 0.1 !important;
-  pointer-events: none !important;
-  z-index: var(--z-overlay) !important;
+  content: '' ;
+  position: fixed ;
+  top: 0 ;
+  left: 0 ;
+  width: 100% ;
+  height: 100% ;
+  background-image: var(--overlay-scanline) ;
+  opacity: 0.1 ;
+  pointer-events: none ;
+  z-index: var(--z-overlay) ;
 }
 
 /* ============================================
@@ -149,12 +149,12 @@ body.sci-fi-theme h3,
 body.sci-fi-theme h4,
 body.sci-fi-theme h5,
 body.sci-fi-theme h6 {
-  font-family: var(--font-display) !important;
-  font-weight: 600 !important;
-  letter-spacing: 0.5px !important;
-  color: var(--color-text-bright) !important;
-  margin-bottom: var(--space-md) !important;
-  position: relative !important;
+  font-family: var(--font-display) ;
+  font-weight: 600 ;
+  letter-spacing: 0.5px ;
+  color: var(--color-text-bright) ;
+  margin-bottom: var(--space-md) ;
+  position: relative ;
 }
 
 .sci-fi-theme h1::after, 
@@ -163,54 +163,54 @@ html.sci-fi-theme h1::after,
 html.sci-fi-theme h2::after,
 body.sci-fi-theme h1::after,
 body.sci-fi-theme h2::after {
-  content: '' !important;
-  position: absolute !important;
-  bottom: -10px !important;
-  left: 0 !important;
-  width: 60px !important;
-  height: 2px !important;
-  background: var(--gradient-primary) !important;
-  border-radius: var(--radius-sm) !important;
+  content: '' ;
+  position: absolute ;
+  bottom: -10px ;
+  left: 0 ;
+  width: 60px ;
+  height: 2px ;
+  background: var(--gradient-primary) ;
+  border-radius: var(--radius-sm) ;
 }
 
 .sci-fi-theme h1, body.sci-fi-theme h1 {
-  font-size: 2.5rem !important;
-  line-height: 1.2 !important;
+  font-size: 2.5rem ;
+  line-height: 1.2 ;
 }
 
 .sci-fi-theme h2, body.sci-fi-theme h2 {
-  font-size: 2rem !important;
-  line-height: 1.25 !important;
+  font-size: 2rem ;
+  line-height: 1.25 ;
 }
 
 .sci-fi-theme h3, body.sci-fi-theme h3 {
-  font-size: 1.5rem !important;
-  line-height: 1.3 !important;
+  font-size: 1.5rem ;
+  line-height: 1.3 ;
 }
 
 .sci-fi-theme p,
 body.sci-fi-theme p {
-  margin-bottom: var(--space-md) !important;
-  color: var(--color-text) !important;
-  font-family: var(--font-primary) !important;
-  line-height: 1.6 !important;
+  margin-bottom: var(--space-md) ;
+  color: var(--color-text) ;
+  font-family: var(--font-primary) ;
+  line-height: 1.6 ;
 }
 
 .sci-fi-theme a,
 body.sci-fi-theme a,
 .sci-fi-theme a:link,
 body.sci-fi-theme a:link {
-  color: var(--color-primary) !important;
-  text-decoration: none !important;
-  position: relative !important;
-  transition: color var(--transition-fast) !important;
-  border-bottom: 1px solid rgba(0, 200, 255, 0.3) !important;
+  color: var(--color-primary) ;
+  text-decoration: none ;
+  position: relative ;
+  transition: color var(--transition-fast) ;
+  border-bottom: 1px solid rgba(0, 200, 255, 0.3) ;
 }
 
 .sci-fi-theme a:hover,
 body.sci-fi-theme a:hover {
-  color: var(--color-text-bright) !important;
-  border-bottom-color: var(--color-primary) !important;
+  color: var(--color-text-bright) ;
+  border-bottom-color: var(--color-primary) ;
 }
 
 /* ============================================
@@ -220,40 +220,40 @@ body.sci-fi-theme a:hover {
 html.sci-fi-theme #sidebar,
 body.sci-fi-theme #sidebar,
 #sidebar.sci-fi-theme {
-  background-color: rgba(10, 22, 49, 0.9) !important;
-  background-image: linear-gradient(to bottom, rgba(10, 22, 49, 0.9), rgba(7, 13, 26, 0.95)) !important;
-  border-right: 1px solid var(--color-ui-panel-border) !important;
-  box-shadow: 2px 0 15px rgba(0, 0, 0, 0.5) !important;
+  background-color: rgba(10, 22, 49, 0.9) ;
+  background-image: linear-gradient(to bottom, rgba(10, 22, 49, 0.9), rgba(7, 13, 26, 0.95)) ;
+  border-right: 1px solid var(--color-ui-panel-border) ;
+  box-shadow: 2px 0 15px rgba(0, 0, 0, 0.5) ;
 }
 
 .sci-fi-theme #sidebar a,
 .sci-fi-theme #sidebar a:link,
 body.sci-fi-theme #sidebar a,
 #sidebar.sci-fi-theme a {
-  border-bottom: none !important;
-  font-family: var(--font-display) !important;
-  letter-spacing: 0.2em !important;
-  color: var(--color-text-dim) !important;
-  transition: color 0.2s ease !important;
+  border-bottom: none ;
+  font-family: var(--font-display) ;
+  letter-spacing: 0.2em ;
+  color: var(--color-text-dim) ;
+  transition: color 0.2s ease ;
 }
 
 .sci-fi-theme #sidebar a:hover,
 body.sci-fi-theme #sidebar a:hover,
 #sidebar.sci-fi-theme a:hover {
-  color: var(--color-text-bright) !important;
+  color: var(--color-text-bright) ;
 }
 
 .sci-fi-theme #sidebar a.active,
 body.sci-fi-theme #sidebar a.active,
 #sidebar.sci-fi-theme a.active {
-  color: var(--color-text-bright) !important;
+  color: var(--color-text-bright) ;
 }
 
 .sci-fi-theme #sidebar a:after,
 body.sci-fi-theme #sidebar a:after,
 #sidebar.sci-fi-theme a:after {
-  background-image: var(--gradient-primary) !important;
-  height: 0.15em !important;
+  background-image: var(--gradient-primary) ;
+  height: 0.15em ;
 }
 
 /* ============================================
@@ -263,38 +263,38 @@ body.sci-fi-theme #sidebar a:after,
 .sci-fi-theme #wrapper,
 body.sci-fi-theme .wrapper,
 body.sci-fi-theme #wrapper {
-  background: transparent !important;
+  background: transparent ;
 }
 
 .sci-fi-theme .wrapper.style1,
 .sci-fi-theme #wrapper .wrapper.style1,
 body.sci-fi-theme .wrapper.style1,
 body.sci-fi-theme #wrapper .wrapper.style1 {
-  background-color: rgba(10, 22, 49, 0.7) !important;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5) !important;
+  background-color: rgba(10, 22, 49, 0.7) ;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5) ;
 }
 
 .sci-fi-theme .wrapper.style2,
 .sci-fi-theme #wrapper .wrapper.style2,
 body.sci-fi-theme .wrapper.style2,
 body.sci-fi-theme #wrapper .wrapper.style2 {
-  background-color: rgba(15, 30, 60, 0.7) !important;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5) !important;
+  background-color: rgba(15, 30, 60, 0.7) ;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5) ;
 }
 
 .sci-fi-theme .wrapper.style3,
 .sci-fi-theme #wrapper .wrapper.style3,
 body.sci-fi-theme .wrapper.style3,
 body.sci-fi-theme #wrapper .wrapper.style3 {
-  background-color: rgba(20, 40, 80, 0.7) !important;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5) !important;
+  background-color: rgba(20, 40, 80, 0.7) ;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5) ;
 }
 
 .sci-fi-theme #intro.wrapper,
 body.sci-fi-theme #intro.wrapper {
-  background-image: var(--gradient-interface) !important;
-  background-attachment: fixed !important;
-  background-size: cover !important;
+  background-image: var(--gradient-interface) ;
+  background-attachment: fixed ;
+  background-size: cover ;
 }
 
 /* ============================================
@@ -310,22 +310,22 @@ body.sci-fi-theme button,
 body.sci-fi-theme input[type="submit"],
 body.sci-fi-theme input[type="reset"],
 body.sci-fi-theme input[type="button"] {
-  background: var(--gradient-button) !important;
-  color: var(--color-text-bright) !important;
-  font-family: var(--font-primary) !important;
-  font-size: 0.9rem !important;
-  font-weight: 500 !important;
-  text-transform: uppercase !important;
-  letter-spacing: 1px !important;
-  padding: 0.8em 1.8em !important;
-  border-radius: var(--radius-md) !important;
-  border: var(--border-accent) !important;
-  cursor: pointer !important;
-  transition: all var(--transition-medium) !important;
-  position: relative !important;
-  overflow: hidden !important;
-  text-align: center !important;
-  box-shadow: var(--shadow-sm), inset 0 0 5px rgba(255, 255, 255, 0.1) !important;
+  background: var(--gradient-button) ;
+  color: var(--color-text-bright) ;
+  font-family: var(--font-primary) ;
+  font-size: 0.9rem ;
+  font-weight: 500 ;
+  text-transform: uppercase ;
+  letter-spacing: 1px ;
+  padding: 0.8em 1.8em ;
+  border-radius: var(--radius-md) ;
+  border: var(--border-accent) ;
+  cursor: pointer ;
+  transition: all var(--transition-medium) ;
+  position: relative ;
+  overflow: hidden ;
+  text-align: center ;
+  box-shadow: var(--shadow-sm), inset 0 0 5px rgba(255, 255, 255, 0.1) ;
 }
 
 .sci-fi-theme .button:hover,
@@ -338,9 +338,9 @@ body.sci-fi-theme button:hover,
 body.sci-fi-theme input[type="submit"]:hover,
 body.sci-fi-theme input[type="reset"]:hover,
 body.sci-fi-theme input[type="button"]:hover {
-  box-shadow: var(--shadow-md), 0 0 8px var(--color-primary) !important;
-  transform: translateY(-2px) !important;
-  color: var(--color-text-bright) !important;
+  box-shadow: var(--shadow-md), 0 0 8px var(--color-primary) ;
+  transform: translateY(-2px) ;
+  color: var(--color-text-bright) ;
 }
 
 .sci-fi-theme .button:active,
@@ -353,8 +353,8 @@ body.sci-fi-theme button:active,
 body.sci-fi-theme input[type="submit"]:active,
 body.sci-fi-theme input[type="reset"]:active,
 body.sci-fi-theme input[type="button"]:active {
-  transform: translateY(1px) !important;
-  box-shadow: var(--shadow-sm) !important;
+  transform: translateY(1px) ;
+  box-shadow: var(--shadow-sm) ;
 }
 
 /* ============================================
@@ -376,12 +376,12 @@ body.sci-fi-theme input[type="search"],
 body.sci-fi-theme input[type="url"],
 body.sci-fi-theme textarea,
 body.sci-fi-theme select {
-  background-color: var(--color-background-dark) !important;
-  color: var(--color-text) !important;
-  border: var(--border-thin) !important;
-  border-radius: var(--radius-md) !important;
-  transition: border-color var(--transition-medium), box-shadow var(--transition-medium) !important;
-  font-family: var(--font-primary) !important;
+  background-color: var(--color-background-dark) ;
+  color: var(--color-text) ;
+  border: var(--border-thin) ;
+  border-radius: var(--radius-md) ;
+  transition: border-color var(--transition-medium), box-shadow var(--transition-medium) ;
+  font-family: var(--font-primary) ;
 }
 
 .sci-fi-theme input[type="text"]:focus,
@@ -400,22 +400,22 @@ body.sci-fi-theme input[type="search"]:focus,
 body.sci-fi-theme input[type="url"]:focus,
 body.sci-fi-theme textarea:focus,
 body.sci-fi-theme select:focus {
-  outline: none !important;
-  border-color: var(--color-primary) !important;
-  box-shadow: 0 0 0 2px rgba(0, 200, 255, 0.2) !important;
+  outline: none ;
+  border-color: var(--color-primary) ;
+  box-shadow: 0 0 0 2px rgba(0, 200, 255, 0.2) ;
 }
 
 .sci-fi-theme label,
 body.sci-fi-theme label {
-  color: var(--color-text-bright) !important;
-  font-weight: 500 !important;
-  font-family: var(--font-primary) !important;
+  color: var(--color-text-bright) ;
+  font-weight: 500 ;
+  font-family: var(--font-primary) ;
 }
 
 .sci-fi-theme ::placeholder,
 body.sci-fi-theme ::placeholder {
-  color: var(--color-text-dim) !important;
-  opacity: 0.6 !important;
+  color: var(--color-text-dim) ;
+  opacity: 0.6 ;
 }
 
 /* ============================================
@@ -424,74 +424,74 @@ body.sci-fi-theme ::placeholder {
 .hologram-container,
 .sci-fi-theme .hologram-container,
 body.sci-fi-theme .hologram-container {
-  width: 300px !important;
-  height: 300px !important;
-  margin: 0 auto 2em auto !important;
-  position: relative !important;
-  border-radius: 5px !important;
-  background-color: rgba(0, 0, 0, 0.1) !important;
-  backdrop-filter: blur(2px) !important;
-  box-shadow: 0 0 20px rgba(0, 100, 255, 0.2) !important;
-  transition: all 0.3s ease !important;
-  z-index: var(--z-hologram) !important;
+  width: 300px ;
+  height: 300px ;
+  margin: 0 auto 2em auto ;
+  position: relative ;
+  border-radius: 5px ;
+  background-color: rgba(0, 0, 0, 0.1) ;
+  backdrop-filter: blur(2px) ;
+  box-shadow: 0 0 20px rgba(0, 100, 255, 0.2) ;
+  transition: all 0.3s ease ;
+  z-index: var(--z-hologram) ;
 }
 
 .hologram-container:before,
 .sci-fi-theme .hologram-container:before,
 body.sci-fi-theme .hologram-container:before {
-  content: '' !important;
-  position: absolute !important;
-  top: 0 !important;
-  left: 0 !important;
-  right: 0 !important;
-  bottom: 0 !important;
-  border-radius: 5px !important;
-  border: 1px solid rgba(0, 180, 255, 0.3) !important;
-  box-shadow: inset 0 0 15px rgba(0, 180, 255, 0.2) !important;
-  z-index: -1 !important;
+  content: '' ;
+  position: absolute ;
+  top: 0 ;
+  left: 0 ;
+  right: 0 ;
+  bottom: 0 ;
+  border-radius: 5px ;
+  border: 1px solid rgba(0, 180, 255, 0.3) ;
+  box-shadow: inset 0 0 15px rgba(0, 180, 255, 0.2) ;
+  z-index: -1 ;
 }
 
 .hologram-container canvas,
 .sci-fi-theme .hologram-container canvas,
 body.sci-fi-theme .hologram-container canvas {
-  width: 100% !important;
-  height: 100% !important;
-  display: block !important;
-  outline: none !important;
+  width: 100% ;
+  height: 100% ;
+  display: block ;
+  outline: none ;
 }
 
 .main-hologram,
 .sci-fi-theme .main-hologram,
 body.sci-fi-theme .main-hologram {
-  width: 400px !important;
-  height: 250px !important;
-  margin-bottom: 2em !important;
+  width: 400px ;
+  height: 250px ;
+  margin-bottom: 2em ;
 }
 
 .mini-hologram-container,
 .sci-fi-theme .mini-hologram-container,
 body.sci-fi-theme .mini-hologram-container {
-  width: 80px !important;
-  height: 80px !important;
-  margin: 0.5em auto !important;
-  display: block !important;
+  width: 80px ;
+  height: 80px ;
+  margin: 0.5em auto ;
+  display: block ;
 }
 
 .hologram-grid,
 .sci-fi-theme .hologram-grid,
 body.sci-fi-theme .hologram-grid {
-  display: flex !important;
-  justify-content: space-around !important;
-  flex-wrap: wrap !important;
-  margin: 2em 0 !important;
+  display: flex ;
+  justify-content: space-around ;
+  flex-wrap: wrap ;
+  margin: 2em 0 ;
 }
 
 .hologram-grid .hologram-container,
 .sci-fi-theme .hologram-grid .hologram-container,
 body.sci-fi-theme .hologram-grid .hologram-container {
-  width: 200px !important;
-  height: 200px !important;
-  margin: 1em !important;
+  width: 200px ;
+  height: 200px ;
+  margin: 1em ;
 }
 
 /* ============================================
@@ -500,32 +500,32 @@ body.sci-fi-theme .hologram-grid .hologram-container {
 .fade-in-slide,
 .sci-fi-theme .fade-in-slide,
 body.sci-fi-theme .fade-in-slide {
-  opacity: 0 !important;
-  animation: fadeInSlide 1s ease-out forwards !important;
+  opacity: 0 ;
+  animation: fadeInSlide 1s ease-out forwards ;
 }
 
 .delay-1,
 .sci-fi-theme .delay-1,
 body.sci-fi-theme .delay-1 {
-  animation-delay: 0.3s !important;
+  animation-delay: 0.3s ;
 }
 
 .delay-2,
 .sci-fi-theme .delay-2,
 body.sci-fi-theme .delay-2 {
-  animation-delay: 0.6s !important;
+  animation-delay: 0.6s ;
 }
 
 .delay-3,
 .sci-fi-theme .delay-3,
 body.sci-fi-theme .delay-3 {
-  animation-delay: 0.9s !important;
+  animation-delay: 0.9s ;
 }
 
 .delay-4,
 .sci-fi-theme .delay-4,
 body.sci-fi-theme .delay-4 {
-  animation-delay: 1.2s !important;
+  animation-delay: 1.2s ;
 }
 
 @keyframes fadeInSlide {
@@ -542,7 +542,7 @@ body.sci-fi-theme .delay-4 {
 .pulse,
 .sci-fi-theme .pulse,
 body.sci-fi-theme .pulse {
-  animation: pulse 2s infinite alternate !important;
+  animation: pulse 2s infinite alternate ;
 }
 
 @keyframes pulse {
@@ -572,49 +572,49 @@ body.sci-fi-theme .pulse {
 .star-background,
 .sci-fi-theme .star-background,
 body.sci-fi-theme .star-background {
-  position: fixed !important;
-  top: 0 !important;
-  left: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
-  z-index: var(--z-background) !important;
-  background-color: var(--color-background-dark) !important;
-  overflow: hidden !important;
-  pointer-events: none !important;
+  position: fixed ;
+  top: 0 ;
+  left: 0 ;
+  width: 100% ;
+  height: 100% ;
+  z-index: var(--z-background) ;
+  background-color: var(--color-background-dark) ;
+  overflow: hidden ;
+  pointer-events: none ;
 }
 
 .star,
 .sci-fi-theme .star,
 body.sci-fi-theme .star {
-  position: absolute !important;
-  background-color: white !important;
-  border-radius: 50% !important;
-  opacity: 0.4 !important;
-  animation: twinkle 4s infinite ease-in-out !important;
+  position: absolute ;
+  background-color: white ;
+  border-radius: 50% ;
+  opacity: 0.4 ;
+  animation: twinkle 4s infinite ease-in-out ;
 }
 
 .star.small,
 .sci-fi-theme .star.small,
 body.sci-fi-theme .star.small {
-  width: 1px !important;
-  height: 1px !important;
-  box-shadow: 0 0 2px 1px rgba(255, 255, 255, 0.1) !important;
+  width: 1px ;
+  height: 1px ;
+  box-shadow: 0 0 2px 1px rgba(255, 255, 255, 0.1) ;
 }
 
 .star.medium,
 .sci-fi-theme .star.medium,
 body.sci-fi-theme .star.medium {
-  width: 2px !important;
-  height: 2px !important;
-  box-shadow: 0 0 2px 1px rgba(255, 255, 255, 0.3) !important;
+  width: 2px ;
+  height: 2px ;
+  box-shadow: 0 0 2px 1px rgba(255, 255, 255, 0.3) ;
 }
 
 .star.large,
 .sci-fi-theme .star.large,
 body.sci-fi-theme .star.large {
-  width: 3px !important;
-  height: 3px !important;
-  box-shadow: 0 0 4px 1px rgba(255, 255, 255, 0.5) !important;
+  width: 3px ;
+  height: 3px ;
+  box-shadow: 0 0 4px 1px rgba(255, 255, 255, 0.5) ;
 }
 
 @keyframes twinkle {
@@ -635,41 +635,41 @@ body.sci-fi-theme .star.large {
 body.sci-fi-theme .wrapper.style1-alt,
 body.sci-fi-theme .wrapper.style2-alt,
 body.sci-fi-theme .wrapper.style3-alt {
-  background-color: rgba(10, 22, 49, 0.9) !important;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5) !important;
+  background-color: rgba(10, 22, 49, 0.9) ;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5) ;
 }
 
 .sci-fi-theme #footer,
 body.sci-fi-theme #footer {
-  background-color: rgba(7, 13, 26, 0.95) !important;
-  border-top: 1px solid var(--color-ui-panel-border) !important;
-  color: var(--color-text-dim) !important;
-  padding: 2em 0 !important;
+  background-color: rgba(7, 13, 26, 0.95) ;
+  border-top: 1px solid var(--color-ui-panel-border) ;
+  color: var(--color-text-dim) ;
+  padding: 2em 0 ;
 }
 
 .sci-fi-theme #footer .inner,
 body.sci-fi-theme #footer .inner {
-  padding: var(--space-md) !important;
-  max-width: 90% !important;
-  margin: 0 auto !important;
+  padding: var(--space-md) ;
+  max-width: 90% ;
+  margin: 0 auto ;
 }
 
 .sci-fi-theme #footer .menu,
 body.sci-fi-theme #footer .menu {
-  color: var(--color-text-dim) !important;
-  font-size: 0.8em !important;
+  color: var(--color-text-dim) ;
+  font-size: 0.8em ;
 }
 
 .sci-fi-theme #footer a,
 body.sci-fi-theme #footer a {
-  color: var(--color-primary) !important;
-  border-bottom-color: rgba(0, 200, 255, 0.2) !important;
+  color: var(--color-primary) ;
+  border-bottom-color: rgba(0, 200, 255, 0.2) ;
 }
 
 .sci-fi-theme #footer a:hover,
 body.sci-fi-theme #footer a:hover {
-  color: var(--color-text-bright) !important;
-  border-bottom-color: var(--color-primary) !important;
+  color: var(--color-text-bright) ;
+  border-bottom-color: var(--color-primary) ;
 }
 
 /* ============================================
@@ -677,73 +677,73 @@ body.sci-fi-theme #footer a:hover {
    ============================================ */
 .sci-fi-theme .menu,
 body.sci-fi-theme .menu {
-  list-style: none !important;
-  padding: 0 !important;
-  display: flex !important;
-  justify-content: center !important;
-  flex-wrap: wrap !important;
+  list-style: none ;
+  padding: 0 ;
+  display: flex ;
+  justify-content: center ;
+  flex-wrap: wrap ;
 }
 
 .sci-fi-theme .menu > li,
 body.sci-fi-theme .menu > li {
-  border-left: 1px solid var(--color-ui-panel-border) !important;
-  margin-left: 1.5em !important;
-  padding-left: 1.5em !important;
-  display: inline-block !important;
-  line-height: 1 !important;
+  border-left: 1px solid var(--color-ui-panel-border) ;
+  margin-left: 1.5em ;
+  padding-left: 1.5em ;
+  display: inline-block ;
+  line-height: 1 ;
 }
 
 .sci-fi-theme .menu > li:first-child,
 body.sci-fi-theme .menu > li:first-child {
-  border-left: 0 !important;
-  margin-left: 0 !important;
-  padding-left: 0 !important;
+  border-left: 0 ;
+  margin-left: 0 ;
+  padding-left: 0 ;
 }
 
 .sci-fi-theme .spotlights > section,
 body.sci-fi-theme .spotlights > section {
-  background-color: rgba(15, 30, 60, 0.7) !important;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3) !important;
-  margin: 1em 0 !important;
-  border-radius: var(--radius-md) !important;
-  overflow: hidden !important;
+  background-color: rgba(15, 30, 60, 0.7) ;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3) ;
+  margin: 1em 0 ;
+  border-radius: var(--radius-md) ;
+  overflow: hidden ;
 }
 
 .sci-fi-theme .spotlights > section:nth-child(2n),
 body.sci-fi-theme .spotlights > section:nth-child(2n) {
-  background-color: rgba(20, 40, 80, 0.7) !important;
+  background-color: rgba(20, 40, 80, 0.7) ;
 }
 
 .sci-fi-theme .spotlights > section:nth-child(3n),
 body.sci-fi-theme .spotlights > section:nth-child(3n) {
-  background-color: rgba(25, 50, 100, 0.7) !important;
+  background-color: rgba(25, 50, 100, 0.7) ;
 }
 
 .sci-fi-theme .spotlights > section .image:before,
 body.sci-fi-theme .spotlights > section .image:before {
-  background: rgba(10, 22, 49, 0.7) !important;
-  opacity: 0.5 !important;
+  background: rgba(10, 22, 49, 0.7) ;
+  opacity: 0.5 ;
 }
 
 .sci-fi-theme .features,
 body.sci-fi-theme .features {
-  background-color: rgba(10, 22, 49, 0.3) !important;
-  border: 1px solid var(--color-ui-panel-border) !important;
-  border-radius: var(--radius-md) !important;
-  overflow: hidden !important;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3) !important;
+  background-color: rgba(10, 22, 49, 0.3) ;
+  border: 1px solid var(--color-ui-panel-border) ;
+  border-radius: var(--radius-md) ;
+  overflow: hidden ;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3) ;
 }
 
 .sci-fi-theme .features section,
 body.sci-fi-theme .features section {
-  border-color: var(--color-ui-panel-border) !important;
+  border-color: var(--color-ui-panel-border) ;
 }
 
 .sci-fi-theme .features .icon.major,
 body.sci-fi-theme .features .icon.major {
-  background: var(--gradient-primary) !important;
-  color: var(--color-text-bright) !important;
-  box-shadow: 0 0 10px rgba(0, 200, 255, 0.5) !important;
+  background: var(--gradient-primary) ;
+  color: var(--color-text-bright) ;
+  box-shadow: 0 0 10px rgba(0, 200, 255, 0.5) ;
 }
 
 /* ============================================
@@ -776,12 +776,12 @@ body.sci-fi-theme h6,
 body.sci-fi-theme p,
 body.sci-fi-theme span,
 body.sci-fi-theme div {
-  font-family: var(--font-primary) !important;
+  font-family: var(--font-primary) ;
 }
 
 .sci-fi-theme *,
 body.sci-fi-theme * {
-  box-sizing: border-box !important;
+  box-sizing: border-box ;
 }
 
 /* Override all background colors in the wrapper */
@@ -791,7 +791,7 @@ body.sci-fi-theme * {
 body.sci-fi-theme .wrapper,
 body.sci-fi-theme .wrapper > div,
 body.sci-fi-theme .wrapper > section {
-  background-color: transparent !important;
+  background-color: transparent ;
 }
 
 /* Force text colors */
@@ -807,7 +807,7 @@ body.sci-fi-theme .content h3,
 body.sci-fi-theme .content h4,
 body.sci-fi-theme .content h5,
 body.sci-fi-theme .content h6 {
-  color: var(--color-text-bright) !important;
+  color: var(--color-text-bright) ;
 }
 
 .sci-fi-theme .content p,
@@ -818,34 +818,34 @@ body.sci-fi-theme .content p,
 body.sci-fi-theme .content span,
 body.sci-fi-theme .content div,
 body.sci-fi-theme .content li {
-  color: var(--color-text) !important;
+  color: var(--color-text) ;
 }
 
 /* Contact section overrides */
 .sci-fi-theme .split,
 body.sci-fi-theme .split {
-  background-color: transparent !important;
+  background-color: transparent ;
 }
 
 .sci-fi-theme .split > *,
 body.sci-fi-theme .split > * {
-  background-color: transparent !important;
+  background-color: transparent ;
 }
 
 .sci-fi-theme form .fields,
 body.sci-fi-theme form .fields {
-  background-color: rgba(10, 22, 49, 0.3) !important;
-  border-radius: var(--radius-md) !important;
-  padding: 1em !important;
-  border: var(--border-thin) !important;
+  background-color: rgba(10, 22, 49, 0.3) ;
+  border-radius: var(--radius-md) ;
+  padding: 1em ;
+  border: var(--border-thin) ;
 }
 
 /* Last minute critical overrides for any elements we might have missed */
 html.sci-fi-theme,
 body.sci-fi-theme {
-  background: var(--gradient-interface) !important;
-  color: var(--color-text) !important;
-  position: relative !important;
+  background: var(--gradient-interface) ;
+  color: var(--color-text) ;
+  position: relative ;
 }
 
 /* Force all content to be visible */
@@ -853,9 +853,9 @@ body.sci-fi-theme {
 .sci-fi-theme .inner,
 body.sci-fi-theme .wrapper > .inner,
 body.sci-fi-theme .inner {
-  opacity: 1 !important;
-  visibility: visible !important;
-  pointer-events: auto !important;
+  opacity: 1 ;
+  visibility: visible ;
+  pointer-events: auto ;
 }
 
 /* ============================================
@@ -864,34 +864,34 @@ body.sci-fi-theme .inner {
 .sci-fi-theme #intro .inner,
 body.sci-fi-theme #intro .inner,
 #intro.sci-fi-theme .inner {
-  opacity: 1 !important;
-  visibility: visible !important;
-  display: block !important;
-  color: var(--color-text) !important;
-  z-index: 1 !important;
+  opacity: 1 ;
+  visibility: visible ;
+  display: block ;
+  color: var(--color-text) ;
+  z-index: 1 ;
 }
 
 .sci-fi-theme #intro h1,
 body.sci-fi-theme #intro h1 {
-  color: var(--color-text-bright) !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-  display: block !important;
+  color: var(--color-text-bright) ;
+  opacity: 1 ;
+  visibility: visible ;
+  display: block ;
 }
 
 .sci-fi-theme #intro p,
 body.sci-fi-theme #intro p {
-  color: var(--color-text) !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-  display: block !important;
+  color: var(--color-text) ;
+  opacity: 1 ;
+  visibility: visible ;
+  display: block ;
 }
 
 /* Force animations to complete */
 .sci-fi-theme .fade-in-slide,
 body.sci-fi-theme .fade-in-slide {
-  animation-fill-mode: forwards !important;
-  opacity: 1 !important; /* Force visibility even without animation */
+  animation-fill-mode: forwards ;
+  opacity: 1 ; /* Force visibility even without animation */
 }
 
 /* Ensure all animated content is visible regardless of animation state */
@@ -899,9 +899,9 @@ body.sci-fi-theme .fade-in-slide {
 body.sci-fi-theme .animated-content,
 .sci-fi-theme .animated-content *,
 body.sci-fi-theme .animated-content * {
-  opacity: 1 !important;
-  visibility: visible !important;
-  display: block !important;
+  opacity: 1 ;
+  visibility: visible ;
+  display: block ;
 }
 
 /* Override any inactive states */
@@ -909,8 +909,8 @@ body.sci-fi-theme .animated-content * {
 .sci-fi-theme .inactive,
 body.sci-fi-theme.inactive,
 body.sci-fi-theme .inactive {
-  opacity: 1 !important;
-  visibility: visible !important;
+  opacity: 1 ;
+  visibility: visible ;
 }
 
 /* ============================================
@@ -919,34 +919,34 @@ body.sci-fi-theme .inactive {
 #intro.wrapper.style1.fullscreen.fade-up,
 .sci-fi-theme #intro.wrapper.style1.fullscreen.fade-up,
 body.sci-fi-theme #intro.wrapper.style1.fullscreen.fade-up {
-  opacity: 1 !important;
-  visibility: visible !important;
-  transform: none !important;
+  opacity: 1 ;
+  visibility: visible ;
+  transform: none ;
 }
 
 #intro .inner,
 .sci-fi-theme #intro .inner,
 body.sci-fi-theme #intro .inner {
-  opacity: 1 !important;
-  visibility: visible !important;
-  transform: none !important;
-  z-index: 2 !important;
-  position: relative !important;
+  opacity: 1 ;
+  visibility: visible ;
+  transform: none ;
+  z-index: 2 ;
+  position: relative ;
 }
 
 /* Force all intro content to be visible */
 #intro .inner *,
 .sci-fi-theme #intro .inner *,
 body.sci-fi-theme #intro .inner * {
-  opacity: 1 !important;
-  visibility: visible !important;
-  color: var(--color-text) !important;
+  opacity: 1 ;
+  visibility: visible ;
+  color: var(--color-text) ;
 }
 
 #intro h1,
 .sci-fi-theme #intro h1,
 body.sci-fi-theme #intro h1 {
-  color: var(--color-text-bright) !important;
+  color: var(--color-text-bright) ;
 }
 
 /* Override hyperspace inactive classes */
@@ -955,13 +955,13 @@ body.sci-fi-theme #intro h1 {
 .wrapper.inactive > .inner,
 body.is-preload .wrapper.fade-up > .inner,
 body.is-preload .wrapper > .inner {
-  opacity: 1 !important;
-  visibility: visible !important;
-  transform: none !important;
+  opacity: 1 ;
+  visibility: visible ;
+  transform: none ;
 }
 
 /* Add margin-top to .actions (button container) to fix overlap between text and buttons */
 .sci-fi-theme .actions,
 body.sci-fi-theme .actions {
-  margin-top: 2em !important;
+  margin-top: 2em ;
 }

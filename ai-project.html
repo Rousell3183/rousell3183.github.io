@@ -4,7 +4,7 @@
 		<title>Ryan Rousell's Portfolio</title>
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-		<meta name="last-modified" content="April 20, 2025"/>
+		<meta name="last-modified" content="April 21, 2025"/>
 		<!-- Load fonts for sci-fi theme -->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500&display=swap">
 		<!-- CSS files in proper cascade order -->
@@ -20,8 +20,8 @@
 			.sci-fi-theme.is-preload *,
 			.sci-fi-theme.is-preload *:before,
 			.sci-fi-theme.is-preload *:after {
-				animation: none !important;
-				transition: none !important;
+				animation: none;
+				transition: none;
 			}
 			/* Contact section layout improvements (shared with index) */
 			#three .split {
@@ -87,6 +87,51 @@
 					padding: 1.2rem 0.6rem;
 				}
 			}
+			.gallery-img {
+				width: 100%;
+				max-width: 210px;
+				height: 140px;
+				object-fit: cover;
+				border-radius: 10px;
+				box-shadow: 0 4px 14px #0002;
+				background: #e6eaf2;
+				transition: transform 0.18s, box-shadow 0.18s;
+				margin-bottom: 0;
+				cursor: pointer;
+			}
+			.gallery-img:hover {
+				transform: scale(1.04);
+				box-shadow: 0 8px 32px #0004;
+				z-index: 2;
+			}
+			#img-modal {
+				display: none;
+				position: fixed;
+				z-index: 99999;
+				left: 0;
+				top: 0;
+				width: 100vw;
+				height: 100vh;
+				background: rgba(18,22,34,0.96);
+				justify-content: center;
+				align-items: center;
+				animation: fadeIn 0.18s;
+			}
+			#img-modal[style*="display: flex"] {
+				display: flex;
+			}
+			#img-modal img {
+				max-width: 90vw;
+				max-height: 90vh;
+				border-radius: 14px;
+				box-shadow: 0 8px 40px #000a;
+				position: relative;
+				z-index: 100000;
+			}
+			@keyframes fadeIn {
+				from { opacity: 0; }
+				to { opacity: 1; }
+			}
 		</style>
 	</head>
 	<body class="is-preload sci-fi-theme">
@@ -109,50 +154,88 @@
 			<section id="main" class="wrapper style1 fade-up">
 				<div class="inner">
 					<h1 class="major">Prestige Lock and Door - AI-Powered Product Matching System</h1>
-					<span class="image fit"><img src="images/pic04.jpg" alt="AI Project Screenshot" /></span>
-					
-					<h2>Project Purpose and Scope</h2>
-					<p>Developed a sophisticated web application for Prestige Lock and Door that automates the tedious process of matching products from supplier flyers with items in their inventory database. This AI-driven solution significantly reduced manual work and improved accuracy in product identification and pricing. The project demonstrates my skills in creating practical applications of artificial intelligence for solving real-world business problems.</p>
-					
-					<h2>Professional Contributions</h2>
-					<p>I led key aspects of this project that showcased my technical abilities and leadership skills:</p>
-					<ul>
-						<li><strong>AI Algorithm Development</strong> - Designed and implemented vector embedding matching algorithms that significantly improved product identification accuracy</li>
-						<li><strong>Security Implementation</strong> - Created a robust login and authentication system to protect sensitive business data</li>
-						<li><strong>Infrastructure Engineering</strong> - Developed Docker containerization solutions for consistent deployment and scaling</li>
-						<li><strong>Cross-functional Collaboration</strong> - Worked with business stakeholders to translate requirements into technical solutions</li>
-						<li><strong>UX Design</strong> - Contributed to interface design that balanced technical capability with ease of use</li>
-					</ul>
-					
-					<h2>Technical Challenges Overcome</h2>
-					<p>This project presented several complex challenges that I successfully addressed:</p>
-					<ul>
-						<li>Developed custom vector embedding algorithms to overcome the limitations of off-the-shelf solutions</li>
-						<li>Created an innovative approach to text similarity matching that handled industry-specific terminology</li>
-						<li>Implemented efficient database architecture to handle large product catalogs while maintaining performance</li>
-						<li>Balanced algorithm sensitivity to enable accurate matching without excessive false positives</li>
-						<li>Integrated multiple data sources with different formats and quality levels into a unified system</li>
-					</ul>
-					
-					<h2>How This Project Helps the Client</h2>
-					<p>This project equips clients with an intelligent, automated system for matching products and managing inventory. By applying advanced AI and secure infrastructure, the solution helps clients:</p>
-					<ul>
-						<li>Automate tedious product matching tasks, freeing staff for higher-value work</li>
-						<li>Reduce errors and improve accuracy in inventory and pricing</li>
-						<li>Integrate new suppliers and data sources smoothly as business grows</li>
-						<li>Rely on a secure, scalable platform that supports ongoing business needs</li>
-					</ul>
-					<h2>Professional Growth and Reflection</h2>
-					<p>This project represented a significant milestone in my professional development:</p>
-					<ul>
-						<li>Deepened my expertise in AI applications for business process automation</li>
-						<li>Enhanced my ability to communicate complex technical concepts to non-technical stakeholders</li>
-						<li>Developed leadership skills through coordinating cross-functional aspects of the project</li>
-						<li>Built confidence in my ability to architect end-to-end solutions from conception to deployment</li>
-						<li>Refined my approach to balancing technical excellence with practical business requirements</li>
-					</ul>
-					<p>Through this project, I demonstrated my ability to leverage cutting-edge technology to solve real business problems. The skills developed are directly applicable to my career goals in software engineering and artificial intelligence, where I aim to create solutions that combine technical innovation with practical business value.</p>
-					<p class="last-modified"><small>Last updated: April 20, 2025 | Content by Ryan Rousell</small></p>
+					<div class="content-with-gallery" style="display:flex;flex-direction:row;align-items:flex-start;gap:2.5rem;">
+						<!-- Sidebar gallery -->
+						<div class="side-gallery" style="min-width:230px;max-width:260px;">
+							<div class="image-gallery" style="display:flex;flex-direction:column;gap:18px;align-items:center;">
+								<img src="images/prj5.pld-flyers/Event.png" alt="Event Screenshot" class="gallery-img selectable-img"/>
+								<img src="images/prj5.pld-flyers/Fine-Tune.png" alt="Fine Tune Screenshot" class="gallery-img selectable-img"/>
+								<img src="images/prj5.pld-flyers/INstructions.png" alt="Instructions Screenshot" class="gallery-img selectable-img"/>
+								<img src="images/prj5.pld-flyers/Review.png" alt="Review Screenshot" class="gallery-img selectable-img"/>
+								<img src="images/prj5.pld-flyers/TrainignDataCreation.png" alt="Training Data Creation Screenshot" class="gallery-img selectable-img"/>
+								<img src="images/prj5.pld-flyers/UpdatePrice.png" alt="Update Price Screenshot" class="gallery-img selectable-img"/>
+								<img src="images/prj5.pld-flyers/Upload.png" alt="Upload Screenshot" class="gallery-img selectable-img"/>
+								<img src="images/prj5.pld-flyers/ViewItems.png" alt="View Items Screenshot" class="gallery-img selectable-img"/>
+								<img src="images/prj5.pld-flyers/Welcome.png" alt="Welcome Screenshot" class="gallery-img selectable-img"/>
+							</div>
+						</div>
+						<!-- Main text content -->
+						<div style="flex:1;min-width:0;">
+							<div class="banner-image" style="width:100%;display:flex;justify-content:center;margin-bottom:2.5rem;">
+								<img src="images/prj5.pld-flyers/Upload.png" alt="AI Project Banner" style="width:100%;max-width:760px;max-height:320px;object-fit:cover;border-radius:18px;box-shadow:0 6px 32px #0003;"/>
+							</div>
+							<h2>Project Purpose and Scope</h2>
+							<p>Developed a sophisticated web application for Prestige Lock and Door that automates the tedious process of matching products from supplier flyers with items in their inventory database. This AI-driven solution significantly reduced manual work and improved accuracy in product identification and pricing. The project demonstrates my skills in creating practical applications of artificial intelligence for solving real-world business problems.</p>
+							
+							<h2>Professional Contributions</h2>
+							<p>I led key aspects of this project that showcased my technical abilities and leadership skills:</p>
+							<ul>
+								<li><strong>AI Algorithm Development</strong> - Designed and implemented vector embedding matching algorithms that significantly improved product identification accuracy</li>
+								<li><strong>Security Implementation</strong> - Created a robust login and authentication system to protect sensitive business data</li>
+								<li><strong>Infrastructure Engineering</strong> - Developed Docker containerization solutions for consistent deployment and scaling</li>
+								<li><strong>Cross-functional Collaboration</strong> - Worked with business stakeholders to translate requirements into technical solutions</li>
+								<li><strong>UX Design</strong> - Contributed to interface design that balanced technical capability with ease of use</li>
+							</ul>
+							
+							<h2>Technical Challenges Overcome</h2>
+							<p>This project presented several complex challenges that I successfully addressed:</p>
+							<ul>
+								<li>Developed custom vector embedding algorithms to overcome the limitations of off-the-shelf solutions</li>
+								<li>Created an innovative approach to text similarity matching that handled industry-specific terminology</li>
+								<li>Implemented efficient database architecture to handle large product catalogs while maintaining performance</li>
+								<li>Balanced algorithm sensitivity to enable accurate matching without excessive false positives</li>
+								<li>Integrated multiple data sources with different formats and quality levels into a unified system</li>
+							</ul>
+							
+							<h2>How This Project Helps the Client</h2>
+							<p>This project equips clients with an intelligent, automated system for matching products and managing inventory. By applying advanced AI and secure infrastructure, the solution helps clients:</p>
+							<ul>
+								<li>Automate tedious product matching tasks, freeing staff for higher-value work</li>
+								<li>Reduce errors and improve accuracy in inventory and pricing</li>
+								<li>Integrate new suppliers and data sources smoothly as business grows</li>
+								<li>Rely on a secure, scalable platform that supports ongoing business needs</li>
+							</ul>
+							<h2>Professional Growth and Reflection</h2>
+							<p>This project represented a significant milestone in my professional development:</p>
+							<ul>
+								<li>Deepened my expertise in AI applications for business process automation</li>
+								<li>Enhanced my ability to communicate complex technical concepts to non-technical stakeholders</li>
+								<li>Developed leadership skills through coordinating cross-functional aspects of the project</li>
+								<li>Built confidence in my ability to architect end-to-end solutions from conception to deployment</li>
+								<li>Refined my approach to balancing technical excellence with practical business requirements</li>
+							</ul>
+							<p>Through this project, I demonstrated my ability to leverage cutting-edge technology to solve real business problems. The skills developed are directly applicable to my career goals in software engineering and artificial intelligence, where I aim to create solutions that combine technical innovation with practical business value.</p>
+							<p class="last-modified"><small>Last updated: April 21, 2025 | Content by Ryan Rousell</small></p>
+						</div>
+					</div>
+					<!-- Fullscreen modal for images -->
+					<div id="img-modal" style="display:none;position:fixed;z-index:99999;left:0;top:0;width:100vw;height:100vh;background:rgba(18,22,34,0.96);justify-content:center;align-items:center;">
+						<img id="modal-img" src="" alt="Full Image" style="max-width:90vw;max-height:90vh;border-radius:14px;box-shadow:0 8px 40px #000a;position:relative;z-index:100000;"/>
+					</div>
+					<script>
+					  document.querySelectorAll('.selectable-img').forEach(img => {
+						img.addEventListener('click', function() {
+						  document.getElementById('modal-img').src = this.src;
+						  document.getElementById('img-modal').style.display = 'flex';
+						});
+					  });
+					  document.getElementById('img-modal').addEventListener('click', function(e) {
+						if (e.target === this) {
+						  this.style.display = 'none';
+						  document.getElementById('modal-img').src = '';
+						}
+					  });
+					</script>
 				</div>
 			</section>
 		</div>

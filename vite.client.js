@@ -58,22 +58,22 @@ export const errorOverlay = {
   // Customize error overlay style
   customStyle: `
     .vite-error-overlay {
-      background-color: rgba(0, 0, 0, 0.85) !important;
-      color: #00c8ff !important;
-      border: 1px solid #7b35e5 !important;
-      border-radius: 4px !important;
-      font-family: 'Roboto Mono', monospace !important;
+      background-color: rgba(0, 0, 0, 0.85) ;
+      color: #00c8ff ;
+      border: 1px solid #7b35e5 ;
+      border-radius: 4px ;
+      font-family: 'Roboto Mono', monospace ;
     }
     .vite-error-overlay-message {
-      color: #fe5578 !important;
+      color: #fe5578 ;
     }
     .vite-error-overlay button {
-      background: linear-gradient(90deg, #00c8ff, #7b35e5) !important;
-      color: white !important;
-      border: none !important;
-      padding: 8px 16px !important;
-      border-radius: 4px !important;
-      cursor: pointer !important;
+      background: linear-gradient(90deg, #00c8ff, #7b35e5) ;
+      color: white ;
+      border: none ;
+      padding: 8px 16px ;
+      border-radius: 4px ;
+      cursor: pointer ;
     }
   `,
   

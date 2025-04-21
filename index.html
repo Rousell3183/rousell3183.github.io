@@ -4,14 +4,13 @@
     <title>Ryan Rousell's Portfolio</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-    <meta name="last-modified" content="April 20, 2025"/>
+    <meta name="last-modified" content="April 21, 2025"/>
     <!-- Load fonts for sci-fi theme -->
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500&display=swap">
 
     <!-- CSS files in proper cascade order -->
     <link rel="stylesheet" href="assets/css/fontawesome-all.min.css"/> <!-- Icon fonts -->
-    <link rel="stylesheet" href="assets/css/base.css"/> <!-- Basic reset and typography -->
     <link rel="stylesheet" href="assets/css/layout.css"/> <!-- Structural layout -->
     <link rel="stylesheet" href="assets/css/sci-fi-theme.css"/> <!-- Visual styling (loaded last) -->
     <noscript>
@@ -22,131 +21,385 @@
         .sci-fi-theme.is-preload *,
         .sci-fi-theme.is-preload *:before,
         .sci-fi-theme.is-preload *:after {
-            animation: none !important;
-            transition: none !important;
+            animation: none;
+            transition: none;
         }
 
         body.sci-fi-theme {
-            background: var(--gradient-interface) !important;
-            font-family: var(--font-primary) !important;
-            color: var(--color-text) !important;
+            background: var(--gradient-interface);
+            font-family: var(--font-primary);
+            color: var(--color-text);
         }
 
         .sci-fi-theme .wrapper.style1,
         .sci-fi-theme .wrapper.style2,
         .sci-fi-theme .wrapper.style3 {
-            background-color: transparent !important;
+            background-color: transparent;
         }
 
         .sci-fi-theme #sidebar {
-            background-color: rgba(10, 22, 49, 0.9) !important;
+            background-color: rgba(10, 22, 49, 0.9);
         }
 
         .sci-fi-theme h1,
         .sci-fi-theme h2,
         .sci-fi-theme h3 {
-            font-family: var(--font-display) !important;
-            color: var(--color-text-bright) !important;
+            font-family: var(--font-display);
+            color: var(--color-text-bright);
         }
 
         body, html {
-          overflow: hidden !important;
-          height: 100%;
+            height: 100%;
         }
+
         #wrapper {
-          height: 100vh;
-          overflow: hidden;
+            height: auto;
+            min-height: 100vh;
+            overflow: visible;
         }
-        /* Make each main section fit the viewport */
-        section.wrapper, section.spotlights, section.style1, section.style2, section.style3, section.fade-up {
-          min-height: 100vh !important;
-          height: 100vh !important;
-          box-sizing: border-box;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          margin: 0 !important;
-          padding: 0 !important;
+
+        /* Only intro is fullscreen and centered */
+        #intro.wrapper {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
+
+        /* All other sections: natural height, no flex */
+        #one.wrapper,
+        #two.wrapper,
+        #three.wrapper {
+            min-height: unset;
+            height: unset;
+            display: block;
+            flex-direction: unset;
+            justify-content: unset;
+            align-items: unset;
+            margin: 0;
+            padding: 0;
+        }
+
         .inner {
-          width: 100%;
-          max-width: 1200px;
-          margin: 0 auto;
-          padding: 2rem 2vw;
-          box-sizing: border-box;
-          height: 100%;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 2vw;
+            box-sizing: border-box;
+            height: unset;
+            display: block;
+            flex-direction: unset;
+            justify-content: unset;
+            align-items: unset;
         }
 
         /* Contact section layout improvements */
         #three .split {
-          display: flex;
-          flex-direction: row;
-          gap: 4vw;
-          justify-content: center;
-          align-items: stretch;
-          width: 100%;
-          max-width: 1100px;
-        }
-        #three .split > section {
-          background: rgba(10,22,49,0.85);
-          border-radius: 1.2rem;
-          box-shadow: 0 8px 32px 0 rgba(31,38,135,0.15);
-          padding: 2.5rem 2rem;
-          flex: 1 1 0;
-          min-width: 320px;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-        }
-        #three form .fields {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 1.2rem 2rem;
-        }
-        #three form .field.half {
-          flex: 1 1 45%;
-          min-width: 140px;
-        }
-        #three form .field {
-          margin-bottom: 1.2rem;
-        }
-        #three form .actions {
-          margin-top: 1.5rem;
-        }
-        #three .contact {
-          list-style: none;
-          padding: 0;
-          margin: 0;
-        }
-        #three .contact li {
-          margin-bottom: 1.5rem;
-        }
-        #three .contact h3 {
-          margin-bottom: 0.3rem;
-          font-size: 1.15em;
-        }
-        #three .contact .icons {
-          display: flex;
-          gap: 1.2rem;
-        }
-        @media (max-width: 900px) {
-          #three .split {
-            flex-direction: column;
-            gap: 2rem;
+            display: flex;
+            flex-direction: row;
+            gap: 4vw;
+            justify-content: center;
             align-items: stretch;
-          }
+            width: 100%;
+            max-width: 1100px;
         }
+
+        #three .split > section {
+            background: rgba(10, 22, 49, 0.85);
+            border-radius: 1.2rem;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+            padding: 2.5rem 2rem;
+            flex: 1 1 0;
+            min-width: 320px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        #three form .fields {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem 2rem;
+        }
+
+        #three form .field.half {
+            flex: 1 1 45%;
+            min-width: 140px;
+        }
+
+        #three form .field {
+            margin-bottom: 1.2rem;
+        }
+
+        #three form .actions {
+            margin-top: 1.5rem;
+        }
+
+        #three .contact {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #three .contact li {
+            margin-bottom: 1.5rem;
+        }
+
+        #three .contact h3 {
+            margin-bottom: 0.3rem;
+            font-size: 1.15em;
+        }
+
+        #three .contact .icons {
+            display: flex;
+            gap: 1.2rem;
+        }
+
+        @media (max-width: 900px) {
+            #three .split {
+                flex-direction: column;
+                gap: 2rem;
+                align-items: stretch;
+            }
+        }
+
         @media (max-width: 600px) {
-          #three .split > section {
-            padding: 1.2rem 0.6rem;
-          }
+            #three .split > section {
+                padding: 1.2rem 0.6rem;
+            }
+        }
+
+        /* Make each major section fill the viewport and center content */
+        #wrapper > section.wrapper {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+        }
+
+        /* Remove extra margin/padding from .inner to avoid overflow */
+        .wrapper > .inner {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 2vw;
+            box-sizing: border-box;
         }
     </style>
+    <style>
+        .next-section-btn {
+            background: var(--gradient-button, #00c8ff);
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            padding: 0.7em 2em;
+            font-size: 1.1em;
+            cursor: pointer;
+            box-shadow: 0 0 10px #00c8ff66;
+            transition: background 0.2s, box-shadow 0.2s;
+            outline: none;
+        }
+
+        .next-section-btn:hover {
+            background: #00c8ff;
+            box-shadow: 0 0 20px #00c8ffcc;
+        }
+    </style>
+    <style>
+        /* Ensure projects section fills the viewport and centers content */
+        #one.wrapper {
+            min-height: unset;
+            display: block;
+            overflow: unset;
+        }
+
+        #one.wrapper > .inner {
+            display: block;
+            justify-content: unset;
+            align-items: unset;
+        }
+
+        /* Restore contact section layout */
+        #three.wrapper .split {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        #three.wrapper .split > * {
+            flex: 1 1 300px;
+            min-width: 250px;
+            max-width: 500px;
+        }
+    </style>
+    <style>
+        /* Fix unordered list and button appearance */
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .actions {
+            display: flex;
+            gap: 1em;
+            justify-content: center;
+            list-style: none;
+            margin: 2em 0 0 0;
+            padding: 0;
+        }
+
+        .actions li {
+            margin: 0;
+            padding: 0;
+        }
+
+        .button {
+            display: inline-block;
+            background: var(--gradient-button, #00c8ff);
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            padding: 0.7em 2em;
+            font-size: 1.1em;
+            cursor: pointer;
+            box-shadow: 0 0 10px #00c8ff66;
+            transition: background 0.2s, box-shadow 0.2s;
+            outline: none;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background: #00c8ff;
+            box-shadow: 0 0 20px #00c8ffcc;
+        }
+    </style>
+    <style>
+        /* Make project spotlight sections fit images naturally, not overly tall */
+        .spotlights > section {
+            display: flex;
+            align-items: stretch;
+            min-height: unset;
+            height: auto;
+            margin-bottom: 2rem;
+        }
+
+        .spotlights .image {
+            width: 440px;
+            min-width: 200px;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0;
+        }
+
+        .spotlights .image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain;
+        }
+
+        .spotlights .content {
+            flex: 1 1 0;
+            padding: 2.5rem 3rem;
+            display: flex;
+            align-items: center;
+        }
+
+        @media (max-width: 900px) {
+            .spotlights > section {
+                flex-direction: column;
+            }
+
+            .spotlights .content {
+                padding: 1.5rem 1rem;
+            }
+
+            .spotlights .image {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+    <style>
+        /* Consistent project image and container sizing for spotlights */
+        .spotlights .image {
+            width: 240px;
+            height: 180px;
+            min-width: 180px;
+            max-width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #111a2f;
+            margin: 0;
+        }
+
+        .spotlights .image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .spotlights .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .spotlights > section {
+            align-items: center;
+            min-height: unset;
+            height: auto;
+            margin-bottom: 2rem;
+        }
+    </style>
+    <style>
+        /* Make project containers only as big as needed, and images fill their containers */
+        .spotlights > section {
+            display: flex;
+            align-items: flex-start;
+            height: 420px;
+            min-height: unset;
+            padding: 0;
+        }
+
+        .spotlights .image {
+            width: 430px;
+            height: 420px;
+            min-width: 120px;
+            max-width: 100%;
+            display: block;
+            margin: 0;
+            background: #111a2f;
+            overflow: hidden;
+        }
+
+        .spotlights .image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
+        .spotlights .content {
+            padding: 1.5rem 2rem;
+            height: 400px;
+            display: block;
+            flex: 1 1 0;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"/>
 </head>
 <body class="is-preload sci-fi-theme">
 <!-- GSAP and Howler.js (if not already included) -->
@@ -157,10 +410,10 @@
     <div class="inner">
         <nav>
             <ul>
-                <li><a href="#intro" data-transition="elevator" data-direction="up">Welcome</a></li>
-                <li><a href="#one">Who I am</a></li>
-                <li><a href="#two">What I do</a></li>
-                <li><a href="#three">Get in touch</a></li>
+                <li><a href="#intro" class="scrolly" data-transition="elevator" data-direction="up">Welcome</a></li>
+                <li><a href="#one" class="scrolly">Who I am</a></li>
+                <li><a href="#two" class="scrolly">What I do</a></li>
+                <li><a href="#three" class="scrolly">Get in touch</a></li>
             </ul>
         </nav>
     </div>
@@ -182,7 +435,8 @@
                 </div>
 
                 <div class="animated-content">
-                    <p class="fade-in-slide delay-3" data-elevator-animate>I love the problem-solving aspects of software
+                    <p class="fade-in-slide delay-3" data-elevator-animate>I love the problem-solving aspects of
+                        software
                         development and aspire to build expertise in cloud security, where I can combine my interests in
                         secure architecture, AI implementation, and robust system design.</p>
                     <ul class="actions fade-in-slide delay-4" data-elevator-animate>
@@ -196,13 +450,18 @@
         <!-- Projects Spotlight -->
         <section id="one" class="wrapper style2 spotlights" data-elevator-section="projects">
             <section data-aos="fade-right" data-aos-duration="800" data-aos-once="false">
-                <a href="#" class="image"><img src="images/pic01.jpg" alt="" data-position="center center"/></a>
+                <a href="ai-project.html" class="image"><img src="images/prj5.pld-flyers/Banner.png" alt=""
+                                                             data-position="center center"></a>
                 <div class="content">
                     <div class="inner">
-                        <h2>Prestige Lock and Door Flyers Application <span class="team-project-badge">(Team Project)</span></h2>
-                        <p>Developed a sophisticated web application for Prestige Lock and Door that automates the process
-                            of matching products from supplier flyers with items in their inventory database. This AI-driven
-                            system streamlines inventory management and pricing updates.<br><em>This project was completed as part of a collaborative team effort.</em></p>
+                        <h2>Prestige Lock and Door Flyers Application <span
+                                class="team-project-badge">(Team Project)</span></h2>
+                        <p>Developed a sophisticated web application for Prestige Lock and Door that automates the
+                            process
+                            of matching products from supplier flyers with items in their inventory database. This
+                            AI-driven
+                            system streamlines inventory management and pricing updates.<br><em>This project was
+                                completed as part of a collaborative team effort.</em></p>
                         <h3>Technologies:</h3>
                         <ul>
                             <li>Python, PostgreSQL, Docker, pgvector</li>
@@ -218,13 +477,14 @@
             </section>
 
             <section data-aos="fade-left" data-aos-duration="800" data-aos-delay="150" data-aos-once="false">
-                <a href="#" class="image"><img src="images/pic02.jpg" alt="" data-position="top center"/></a>
+                <a href="city-events.html" class="image"><img src="images/pic02.jpg" alt="" data-position="top center"/></a>
                 <div class="content">
                     <div class="inner">
                         <h2>City Event Application <span class="team-project-badge">(Team Project)</span></h2>
                         <p>Created a dynamic city event management platform for Zu.com that allows users to discover,
                             create, and manage local events. The application provides a seamless interface for event
-                            organizers and attendees, enhancing community engagement and event participation throughout the
+                            organizers and attendees, enhancing community engagement and event participation throughout
+                            the
                             city.<br><em>This project was completed as part of a collaborative team effort.</em></p>
                         <h3>Technologies:</h3>
                         <ul>
@@ -241,11 +501,14 @@
             </section>
 
             <section data-aos="fade-right" data-aos-duration="800" data-aos-delay="300" data-aos-once="false">
-                <a href="#" class="image"><img src="images/pic03.jpg" alt="" data-position="25% 25%"/></a>
+                <a href="junk-busters.html" class="image"><img
+                        src="images/junkbusters/Screenshot_20250421_145026_Junk Busters banner.png" alt=""
+                        data-position="25% 25%" width=440px height="410px"/></a>
                 <div class="content">
                     <div class="inner">
                         <h2>Junk Busters Mobile Game</h2>
-                        <p>Developed a Star Wars themed Android mobile game where players control Luke Skywalker battling
+                        <p>Developed a Star Wars themed Android mobile game where players control Luke Skywalker
+                            battling
                             against Darth Vader. Players must time their lightsaber swings to deflect space junk being
                             thrown by Vader, with authentic sound effects and animations creating an immersive gaming
                             experience.</p>
@@ -267,14 +530,18 @@
         <!-- Two -->
         <section id="two" class="wrapper style3 fade-up" data-elevator-section="skills">
             <div class="inner">
-                <h2 data-aos="fade-up" data-aos-once="false" data-elevator-animate data-aos-anchor-placement="top-center">
+                <h2 data-aos="fade-up" data-aos-once="false" data-elevator-animate
+                    data-aos-anchor-placement="top-center">
                     What I do</h2>
-                <p data-aos="fade-up" data-aos-delay="150" data-aos-once="false">Combining technical expertise in software
-                    development with professional athletic experience, I bring a unique blend of skills to every project. My
+                <p data-aos="fade-up" data-aos-delay="150" data-aos-once="false">Combining technical expertise in
+                    software
+                    development with professional athletic experience, I bring a unique blend of skills to every
+                    project. My
                     career is focused on creating secure, intelligent systems that solve real business problems at the
-                    intersection of AI/ML and cloud security. I'm committed to developing solutions that balance security
+                    intersection of AI/ML and cloud security. I'm committed to developing solutions that balance
+                    security
                     with performance and usability.</p>
-                <p class="last-modified"><small>Last updated: April 16, 2025 | Content by Ryan Rousell</small></p>
+                <p class="last-modified"><small>Last updated: April 21, 2025 | Content by Ryan Rousell</small></p>
 
                 <!-- Skills hologram visualizations -->
                 <div class="hologram-grid">
@@ -297,7 +564,8 @@
                         <h3><i class="fas fa-robot" aria-hidden="true"></i> AI & Machine Learning</h3>
                         <div class="mini-hologram-container" data-hologram-container data-hologram-type="geometry"
                              data-geometry="octahedron"></div>
-                        <p>Developed custom AI solutions using vector embedding algorithms to improve data matching and streamline processing, while ensuring data security.</p>
+                        <p>Developed custom AI solutions using vector embedding algorithms to improve data matching and
+                            streamline processing, while ensuring data security.</p>
                     </section>
                     <section data-aos="zoom-in" data-aos-delay="100" data-aos-once="false" data-elevator-stagger>
                         <h3><i class="fas fa-database" aria-hidden="true"></i> Database Management</h3>
@@ -317,7 +585,8 @@
                         <h3><i class="fas fa-cloud" aria-hidden="true"></i> Cloud Security</h3>
                         <div class="mini-hologram-container" data-hologram-container data-hologram-type="geometry"
                              data-geometry="icosahedron"></div>
-                        <p>Designing secure cloud architectures with AWS and Azure. Implemented security best practices for
+                        <p>Designing secure cloud architectures with AWS and Azure. Implemented security best practices
+                            for
                             data protection and compliance with industry standards.</p>
                     </section>
                     <section data-aos="zoom-in" data-aos-delay="250" data-aos-once="false" data-elevator-stagger>
@@ -342,7 +611,8 @@
         <!-- Three -->
         <section id="three" class="wrapper style1 fade-up" data-elevator-section="contact">
             <div class="inner">
-                <h2 data-aos="fade-up" data-aos-once="false" data-elevator-animate data-aos-anchor-placement="top-center">
+                <h2 data-aos="fade-up" data-aos-once="false" data-elevator-animate
+                    data-aos-anchor-placement="top-center">
                     Get in touch</h2>
                 <p data-aos="fade-up" data-aos-delay="150" data-aos-once="false">I'm always interested in discussing new
                     projects, opportunities, or collaborations. Feel free to reach out through any of the following
@@ -417,8 +687,16 @@
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
 <!-- Main Application Script (imports all other dependencies) -->
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
 <script type="module" src="./assets/js/main.js"></script>
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"/>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        if (window.AOS) AOS.init({once: false});
+    });
+</script>
 <script>
     // Add sci-fi theme class to ensure it takes precedence
     document.addEventListener('DOMContentLoaded', function () {
@@ -434,46 +712,7 @@
     });
 </script>
 <script>
-// Smooth section navigation and disable scroll
-function scrollToSection(id) {
-  var el = document.getElementById(id.replace('#', ''));
-  if (el) {
-    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
-}
-// Intercept sidebar nav clicks
-window.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('#sidebar nav a[href^="#"]').forEach(function(link) {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      scrollToSection(this.getAttribute('href'));
-    });
-  });
-  // Prevent scroll via keys/wheel/touch
-  window.addEventListener('wheel', e => e.preventDefault(), { passive: false });
-  window.addEventListener('touchmove', e => e.preventDefault(), { passive: false });
-  window.addEventListener('keydown', function(e) {
-    // Prevent arrow keys, page up/down, space, home/end
-    if ([32,33,34,35,36,37,38,39,40].includes(e.keyCode)) {
-      e.preventDefault();
-    }
-  });
-});
-</script>
-<script>
-  // Smooth scroll for sidebar anchor links
-  document.addEventListener('DOMContentLoaded', function () {
-    document.querySelectorAll('#sidebar nav a[href^="#"]').forEach(function(link) {
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href').replace('#','');
-        const section = document.getElementById(targetId);
-        if (section) {
-          section.scrollIntoView({ behavior: 'smooth' });
-        }
-      });
-    });
-  });
+    // Remove any custom section-by-section scroll, restore default browser scroll
 </script>
 </body>
 </html>
