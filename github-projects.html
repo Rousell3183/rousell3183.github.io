@@ -118,5 +118,15 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
+		<!-- Door Transition dependencies and init (auto-injects CSS) -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+		<script src="assets/doorTransition.js"></script>
+		<script>
+		  DoorTransition.ensureOverlay();
+		  DoorTransition.playOpenOnLoad();
+		  DoorTransition.enableOnLinks();
+		</script>
+
 	</body>
 </html>

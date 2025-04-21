@@ -43,6 +43,24 @@ const DEFAULT_SOUNDS = {
     spatial: true
   },
   
+  // Starship corridor sounds
+  doorOpen: {
+    src: '/assets/sounds/door-open.mp3',
+    volume: 0.7,
+    preload: true
+  },
+  doorClose: {
+    src: '/assets/sounds/door-close.mp3',
+    volume: 0.7,
+    preload: true
+  },
+  corridorAmbient: {
+    src: '/assets/sounds/corridor-ambient.mp3',
+    volume: 0.2,
+    loop: true,
+    preload: true
+  },
+  
   // Ambient sounds
   ambientHum: {
     src: '/assets/sounds/ambient-hum.mp3',

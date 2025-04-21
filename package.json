@@ -27,7 +27,6 @@
   "license": "ISC",
   "dependencies": {
     "@barba/core": "^2.9.7",
-    "aos": "^2.3.4",
     "gsap": "^3.12.7",
     "howler": "^2.2.3",
     "three": "^0.152.2"

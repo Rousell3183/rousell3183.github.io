@@ -1,305 +1,468 @@
 <!DOCTYPE HTML>
 <html class="sci-fi-theme">
-	<head>
-		<title>Ryan Rousell's Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="last-modified" content="April 16, 2025" />
-		<!-- Load fonts for sci-fi theme -->
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500&display=swap">
-		
-		<!-- CSS files in proper cascade order -->
-		<link rel="stylesheet" href="assets/css/fontawesome-all.min.css" /> <!-- Icon fonts -->
-		<link rel="stylesheet" href="assets/css/base.css" /> <!-- Basic reset and typography -->
-		<link rel="stylesheet" href="assets/css/layout.css" /> <!-- Structural layout -->
-		<link rel="stylesheet" href="assets/css/sci-fi-theme.css" /> <!-- Visual styling (loaded last) -->
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<style>
-			/* High-priority overrides to ensure sci-fi theme takes precedence */
-			.sci-fi-theme.is-preload *, 
-			.sci-fi-theme.is-preload *:before, 
-			.sci-fi-theme.is-preload *:after {
-				animation: none !important;
-				transition: none !important;
-			}
-			
-			body.sci-fi-theme {
-				background: var(--gradient-interface) !important;
-				font-family: var(--font-primary) !important;
-				color: var(--color-text) !important;
-			}
-			
-			.sci-fi-theme .wrapper.style1, 
-			.sci-fi-theme .wrapper.style2, 
-			.sci-fi-theme .wrapper.style3 {
-				background-color: transparent !important;
-			}
-			
-			.sci-fi-theme #sidebar {
-				background-color: rgba(10, 22, 49, 0.9) !important;
-			}
-			
-			.sci-fi-theme h1, 
-			.sci-fi-theme h2, 
-			.sci-fi-theme h3 {
-				font-family: var(--font-display) !important;
-				color: var(--color-text-bright) !important;
-			}
-		</style>
-	</head>
-	<body class="is-preload sci-fi-theme">
+<head>
+    <title>Ryan Rousell's Portfolio</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <meta name="last-modified" content="April 16, 2025"/>
+    <!-- Load fonts for sci-fi theme -->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500&display=swap">
 
-		<!-- Sidebar -->
-			<section id="sidebar">
-				<div class="inner">
-					<nav>
-						<ul>
-							<li><a href="#intro" data-transition="elevator" data-direction="up">Welcome</a></li>
-							<li><a href="#one" data-transition="elevator" data-direction="down">Who I am</a></li>
-							<li><a href="#two" data-transition="elevator" data-direction="down">What I do</a></li>
-							<li><a href="#three" data-transition="elevator" data-direction="down">Get in touch</a></li>
-						</ul>
-					</nav>
-				</div>
-			</section>
+    <!-- CSS files in proper cascade order -->
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css"/> <!-- Icon fonts -->
+    <link rel="stylesheet" href="assets/css/base.css"/> <!-- Basic reset and typography -->
+    <link rel="stylesheet" href="assets/css/layout.css"/> <!-- Structural layout -->
+    <link rel="stylesheet" href="assets/css/sci-fi-theme.css"/> <!-- Visual styling (loaded last) -->
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css"/>
+    </noscript>
+    <style>
+        /* High-priority overrides to ensure sci-fi theme takes precedence */
+        .sci-fi-theme.is-preload *,
+        .sci-fi-theme.is-preload *:before,
+        .sci-fi-theme.is-preload *:after {
+            animation: none !important;
+            transition: none !important;
+        }
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+        body.sci-fi-theme {
+            background: var(--gradient-interface) !important;
+            font-family: var(--font-primary) !important;
+            color: var(--color-text) !important;
+        }
 
-				<!-- Intro -->
-					<section id="intro" class="wrapper style1 fullscreen fade-up" data-elevator-section="intro">
-						<div class="inner">
-							<h1 class="fade-in-slide" data-elevator-animate>Ryan Rousell</h1>
-							
-							<!-- Main welcome hologram -->
-							<div class="hologram-container main-hologram" id="welcome-hologram" 
-								data-hologram-container data-hologram-type="text" 
-								data-hologram-text="STARSHIP">
-							</div>
-							
-							<div class="animated-content">
-								<p class="fade-in-slide delay-3" data-elevator-animate>I love the problem-solving aspects of software development and aspire to build expertise in cloud security, where I can combine my interests in secure architecture, AI implementation, and robust system design.</p>
-								<ul class="actions fade-in-slide delay-4" data-elevator-animate>
-									<li><a href="#one" class="button scrolly" data-transition="elevator" data-direction="down">Explore my projects</a></li>
-								</ul>
-							</div>
-						</div>
-					</section>
+        .sci-fi-theme .wrapper.style1,
+        .sci-fi-theme .wrapper.style2,
+        .sci-fi-theme .wrapper.style3 {
+            background-color: transparent !important;
+        }
 
-				<!-- Projects Spotlight -->
-					<section id="one" class="wrapper style2 spotlights" data-elevator-section="projects">
-						<section data-aos="fade-right" data-aos-duration="800" data-aos-once="false">
-							<a href="#" class="image"><img src="images/pic01.jpg" alt="" data-position="center center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Prestige Lock and Door Flyers Application</h2>
-									<p>Developed a sophisticated web application for Prestige Lock and Door that automates the process of matching products from supplier flyers with items in their inventory database. This AI-driven system streamlines inventory management and pricing updates.</p>
-									<h3>Technologies:</h3>
-									<ul>
-										<li>Python, PostgreSQL, Docker, pgvector</li>
-										<li>Vector embedding algorithms for accurate product identification</li>
-										<li>Secure authentication system protecting sensitive business data</li>
-										<li>Optimized database architecture handling thousands of products</li>
-									</ul>
-									<ul class="actions">
-										<li><a href="ai-project.html" class="button">Learn more</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						
-						<section data-aos="fade-left" data-aos-duration="800" data-aos-delay="150" data-aos-once="false">
-							<a href="#" class="image"><img src="images/pic02.jpg" alt="" data-position="top center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>City Event Application</h2>
-									<p>Created a dynamic city event management platform for Zu.com that allows users to discover, create, and manage local events. The application provides a seamless interface for event organizers and attendees, enhancing community engagement and event participation throughout the city.</p>
-									<h3>Technologies:</h3>
-									<ul>
-										<li>Vue 3, TypeScript, PHP, MySQL</li>
-										<li>Interactive map integration and advanced search capabilities</li>
-										<li>User authentication and profile management</li>
-										<li>Responsive design and real-time notifications</li>
-									</ul>
-									<ul class="actions">
-										<li><a href="city-events.html" class="button">Learn more</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						
-						<section data-aos="fade-right" data-aos-duration="800" data-aos-delay="300" data-aos-once="false">
-							<a href="#" class="image"><img src="images/pic03.jpg" alt="" data-position="25% 25%" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Junk Busters Mobile Game</h2>
-									<p>Developed a Star Wars themed Android mobile game where players control Luke Skywalker battling against Darth Vader. Players must time their lightsaber swings to deflect space junk being thrown by Vader, with authentic sound effects and animations creating an immersive gaming experience.</p>
-									<h3>Technologies:</h3>
-									<ul>
-										<li>Java, Android SDK, SQLite</li>
-										<li>Custom collision detection and character animations</li>
-										<li>Game loop architecture and sound management</li>
-										<li>Local leaderboard with photo capture functionality</li>
-									</ul>
-									<ul class="actions">
-										<li><a href="junk-busters.html" class="button">Learn more</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-					</section>
+        .sci-fi-theme #sidebar {
+            background-color: rgba(10, 22, 49, 0.9) !important;
+        }
 
-				<!-- Two -->
-					<section id="two" class="wrapper style3 fade-up" data-elevator-section="skills">
-						<div class="inner">
-							<h2 data-aos="fade-up" data-aos-once="false" data-elevator-animate data-aos-anchor-placement="top-center">What I do</h2>
-							<p data-aos="fade-up" data-aos-delay="150" data-aos-once="false">Combining technical expertise in software development with professional athletic experience, I bring a unique blend of skills to every project. My career is focused on creating secure, intelligent systems that solve real business problems at the intersection of AI/ML and cloud security. I'm committed to developing solutions that balance security with performance and usability.</p>
-							<p class="last-modified"><small>Last updated: April 16, 2025 | Content by Ryan Rousell</small></p>
-							
-							<!-- Skills hologram visualizations -->
-							<div class="hologram-grid">
-								<div class="hologram-container" id="ai-hologram" 
-									data-hologram-container data-hologram-type="geometry" 
-									data-geometry="sphere">
-								</div>
-								<div class="hologram-container" id="cloud-hologram" 
-									data-hologram-container data-hologram-type="geometry" 
-									data-geometry="cube">
-								</div>
-								<div class="hologram-container" id="code-hologram" 
-									data-hologram-container data-hologram-type="text" 
-									data-hologram-text="CODE">
-								</div>
-							</div>
-							
-							<div class="features">
-								<section data-aos="zoom-in" data-aos-delay="250" data-aos-once="false" data-elevator-stagger>
-									<span class="icon solid major fa-brain"></span>
-									<h3>AI & Machine Learning</h3>
-									<div class="mini-hologram-container" data-hologram-container data-hologram-type="geometry" data-geometry="octahedron"></div>
-									<p>Implemented vector embedding algorithms that achieved 95% matching accuracy on real-world data. Developed custom AI solutions that reduced manual processing time by over 80% while maintaining data security.</p>
-								</section>
-								<section data-aos="zoom-in" data-aos-delay="100" data-aos-once="false" data-elevator-stagger>
-									<span class="icon solid major fa-database"></span>
-									<h3>Database Management</h3>
-									<div class="mini-hologram-container" data-hologram-container data-hologram-type="geometry" data-geometry="tetrahedron"></div>
-									<p>Proficient in PostgreSQL, pgvector, and database design. Experience in data cleaning and optimization for AI applications.</p>
-								</section>
-								<section data-aos="zoom-in" data-aos-delay="150" data-aos-once="false" data-elevator-stagger>
-									<span class="icon solid major fa-code"></span>
-									<h3>Web Development</h3>
-									<div class="mini-hologram-container" data-hologram-container data-hologram-type="geometry" data-geometry="torus"></div>
-									<p>Experienced in building responsive web applications with Vue, React, and traditional web technologies. Focus on clean code architecture and modern development practices.</p>
-								</section>
-								<section data-aos="zoom-in" data-aos-delay="200" data-aos-once="false" data-elevator-stagger>
-									<span class="icon solid major fa-cloud"></span>
-									<h3>Cloud Security</h3>
-									<div class="mini-hologram-container" data-hologram-container data-hologram-type="geometry" data-geometry="icosahedron"></div>
-									<p>Designing secure cloud architectures with AWS and Azure. Implemented security best practices for data protection and compliance with industry standards.</p>
-								</section>
-								<section data-aos="zoom-in" data-aos-delay="250" data-aos-once="false" data-elevator-stagger>
-									<span class="icon solid major fa-laptop-code"></span>
-									<h3>Programming Languages</h3>
-									<p>Proficient in Python, Java, PHP, TypeScript, JavaScript, and SQL. Experience in both object-oriented and functional programming paradigms.</p>
-								</section>
-								<section data-aos="zoom-in" data-aos-delay="300" data-aos-once="false" data-elevator-stagger>
-									<span class="icon major fa-medal"></span>
-									<h3>Professional Athletics</h3>
-									<p>International level competitor in fencing, bringing discipline, strategic thinking, and performance under pressure to technical projects.</p>
-								</section>
-							</div>
-							<ul class="actions" data-aos="fade-up" data-aos-delay="300" data-aos-once="false">
-								<li><a href="github-projects.html" class="button" data-elevator-stagger>Learn more</a></li>
-							</ul>
-						</div>
-					</section>
+        .sci-fi-theme h1,
+        .sci-fi-theme h2,
+        .sci-fi-theme h3 {
+            font-family: var(--font-display) !important;
+            color: var(--color-text-bright) !important;
+        }
 
-				<!-- Three -->
-					<section id="three" class="wrapper style1 fade-up" data-elevator-section="contact">
-						<div class="inner">
-							<h2 data-aos="fade-up" data-aos-once="false" data-elevator-animate data-aos-anchor-placement="top-center">Get in touch</h2>
-							<p data-aos="fade-up" data-aos-delay="150" data-aos-once="false">I'm always interested in discussing new projects, opportunities, or collaborations. Feel free to reach out through any of the following methods:</p>
-							<div class="split style1">
-								<section data-aos="fade-right" data-aos-delay="200" data-aos-once="false" data-elevator-animate>
-									<form method="post" action="#">
-										<div class="fields">
-											<div class="field half">
-												<label for="name">Name</label>
-												<input type="text" name="name" id="name" />
-											</div>
-											<div class="field half">
-												<label for="email">Email</label>
-												<input type="text" name="email" id="email" />
-											</div>
-											<div class="field">
-												<label for="message">Message</label>
-												<textarea name="message" id="message" rows="5"></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><a href="" class="button submit">Send Message</a></li>
-										</ul>
-									</form>
-								</section>
-								<section data-aos="fade-left" data-aos-delay="200" data-aos-once="false" data-elevator-animate>
-									<ul class="contact">
-										<li>
-											<h3>Address</h3>
-											<span>218 Boychuk Drive<br />
-											Saskatoon, SK, S7H 4C9<br />
+        body, html {
+          overflow: hidden !important;
+          height: 100%;
+        }
+        #wrapper {
+          height: 100vh;
+          overflow: hidden;
+        }
+        /* Make each main section fit the viewport */
+        section.wrapper, section.spotlights, section.style1, section.style2, section.style3, section.fade-up {
+          min-height: 100vh !important;
+          height: 100vh !important;
+          box-sizing: border-box;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin: 0 !important;
+          padding: 0 !important;
+        }
+        .inner {
+          width: 100%;
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 2rem 2vw;
+          box-sizing: border-box;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
+        /* Contact section layout improvements */
+        #three .split {
+          display: flex;
+          flex-direction: row;
+          gap: 4vw;
+          justify-content: center;
+          align-items: stretch;
+          width: 100%;
+          max-width: 1100px;
+        }
+        #three .split > section {
+          background: rgba(10,22,49,0.85);
+          border-radius: 1.2rem;
+          box-shadow: 0 8px 32px 0 rgba(31,38,135,0.15);
+          padding: 2.5rem 2rem;
+          flex: 1 1 0;
+          min-width: 320px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+        #three form .fields {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 1.2rem 2rem;
+        }
+        #three form .field.half {
+          flex: 1 1 45%;
+          min-width: 140px;
+        }
+        #three form .field {
+          margin-bottom: 1.2rem;
+        }
+        #three form .actions {
+          margin-top: 1.5rem;
+        }
+        #three .contact {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+        #three .contact li {
+          margin-bottom: 1.5rem;
+        }
+        #three .contact h3 {
+          margin-bottom: 0.3rem;
+          font-size: 1.15em;
+        }
+        #three .contact .icons {
+          display: flex;
+          gap: 1.2rem;
+        }
+        @media (max-width: 900px) {
+          #three .split {
+            flex-direction: column;
+            gap: 2rem;
+            align-items: stretch;
+          }
+        }
+        @media (max-width: 600px) {
+          #three .split > section {
+            padding: 1.2rem 0.6rem;
+          }
+        }
+    </style>
+</head>
+<body class="is-preload sci-fi-theme">
+<!-- GSAP and Howler.js (if not already included) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+<!-- Sidebar -->
+<section id="sidebar">
+    <div class="inner">
+        <nav>
+            <ul>
+                <li><a href="#intro" data-transition="elevator" data-direction="up">Welcome</a></li>
+                <li><a href="#one" data-transition="elevator" data-direction="down">Who I am</a></li>
+                <li><a href="#two" data-transition="elevator" data-direction="down">What I do</a></li>
+                <li><a href="#three" data-transition="elevator" data-direction="down">Get in touch</a></li>
+            </ul>
+        </nav>
+    </div>
+</section>
+
+<!-- Main content wrapper for Barba.js compatibility -->
+<main data-barba="wrapper">
+    <div id="wrapper">
+
+        <!-- Intro -->
+        <section id="intro" class="wrapper style1 fullscreen fade-up" data-elevator-section="intro">
+            <div class="inner">
+                <h1 class="fade-in-slide" data-elevator-animate>Ryan Rousell</h1>
+
+                <!-- Main welcome hologram -->
+                <div class="hologram-container main-hologram" id="welcome-hologram"
+                     data-hologram-container data-hologram-type="text"
+                     data-hologram-text="STARSHIP">
+                </div>
+
+                <div class="animated-content">
+                    <p class="fade-in-slide delay-3" data-elevator-animate>I love the problem-solving aspects of software
+                        development and aspire to build expertise in cloud security, where I can combine my interests in
+                        secure architecture, AI implementation, and robust system design.</p>
+                    <ul class="actions fade-in-slide delay-4" data-elevator-animate>
+                        <li><a href="#one" class="button scrolly" data-transition="elevator" data-direction="down">Explore
+                            my projects</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Spotlight -->
+        <section id="one" class="wrapper style2 spotlights" data-elevator-section="projects">
+            <section data-aos="fade-right" data-aos-duration="800" data-aos-once="false">
+                <a href="#" class="image"><img src="images/pic01.jpg" alt="" data-position="center center"/></a>
+                <div class="content">
+                    <div class="inner">
+                        <h2>Prestige Lock and Door Flyers Application</h2>
+                        <p>Developed a sophisticated web application for Prestige Lock and Door that automates the process
+                            of matching products from supplier flyers with items in their inventory database. This AI-driven
+                            system streamlines inventory management and pricing updates.</p>
+                        <h3>Technologies:</h3>
+                        <ul>
+                            <li>Python, PostgreSQL, Docker, pgvector</li>
+                            <li>Vector embedding algorithms for accurate product identification</li>
+                            <li>Secure authentication system protecting sensitive business data</li>
+                            <li>Optimized database architecture handling thousands of products</li>
+                        </ul>
+                        <ul class="actions">
+                            <li><a href="ai-project.html" class="button">Learn more</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section data-aos="fade-left" data-aos-duration="800" data-aos-delay="150" data-aos-once="false">
+                <a href="#" class="image"><img src="images/pic02.jpg" alt="" data-position="top center"/></a>
+                <div class="content">
+                    <div class="inner">
+                        <h2>City Event Application</h2>
+                        <p>Created a dynamic city event management platform for Zu.com that allows users to discover,
+                            create, and manage local events. The application provides a seamless interface for event
+                            organizers and attendees, enhancing community engagement and event participation throughout the
+                            city.</p>
+                        <h3>Technologies:</h3>
+                        <ul>
+                            <li>Vue 3, TypeScript, PHP, MySQL</li>
+                            <li>Interactive map integration and advanced search capabilities</li>
+                            <li>User authentication and profile management</li>
+                            <li>Responsive design and real-time notifications</li>
+                        </ul>
+                        <ul class="actions">
+                            <li><a href="city-events.html" class="button">Learn more</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section data-aos="fade-right" data-aos-duration="800" data-aos-delay="300" data-aos-once="false">
+                <a href="#" class="image"><img src="images/pic03.jpg" alt="" data-position="25% 25%"/></a>
+                <div class="content">
+                    <div class="inner">
+                        <h2>Junk Busters Mobile Game</h2>
+                        <p>Developed a Star Wars themed Android mobile game where players control Luke Skywalker battling
+                            against Darth Vader. Players must time their lightsaber swings to deflect space junk being
+                            thrown by Vader, with authentic sound effects and animations creating an immersive gaming
+                            experience.</p>
+                        <h3>Technologies:</h3>
+                        <ul>
+                            <li>Java, Android SDK, SQLite</li>
+                            <li>Custom collision detection and character animations</li>
+                            <li>Game loop architecture and sound management</li>
+                            <li>Local leaderboard with photo capture functionality</li>
+                        </ul>
+                        <ul class="actions">
+                            <li><a href="junk-busters.html" class="button">Learn more</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Two -->
+        <section id="two" class="wrapper style3 fade-up" data-elevator-section="skills">
+            <div class="inner">
+                <h2 data-aos="fade-up" data-aos-once="false" data-elevator-animate data-aos-anchor-placement="top-center">
+                    What I do</h2>
+                <p data-aos="fade-up" data-aos-delay="150" data-aos-once="false">Combining technical expertise in software
+                    development with professional athletic experience, I bring a unique blend of skills to every project. My
+                    career is focused on creating secure, intelligent systems that solve real business problems at the
+                    intersection of AI/ML and cloud security. I'm committed to developing solutions that balance security
+                    with performance and usability.</p>
+                <p class="last-modified"><small>Last updated: April 16, 2025 | Content by Ryan Rousell</small></p>
+
+                <!-- Skills hologram visualizations -->
+                <div class="hologram-grid">
+                    <div class="hologram-container" id="ai-hologram"
+                         data-hologram-container data-hologram-type="geometry"
+                         data-geometry="sphere">
+                    </div>
+                    <div class="hologram-container" id="cloud-hologram"
+                         data-hologram-container data-hologram-type="geometry"
+                         data-geometry="cube">
+                    </div>
+                    <div class="hologram-container" id="code-hologram"
+                         data-hologram-container data-hologram-type="text"
+                         data-hologram-text="CODE">
+                    </div>
+                </div>
+
+                <div class="features">
+                    <section data-aos="zoom-in" data-aos-delay="250" data-aos-once="false" data-elevator-stagger>
+                        <span class="icon solid major fa-brain"></span>
+                        <h3>AI & Machine Learning</h3>
+                        <div class="mini-hologram-container" data-hologram-container data-hologram-type="geometry"
+                             data-geometry="octahedron"></div>
+                        <p>Developed custom AI solutions using vector embedding algorithms to improve data matching and streamline processing, while ensuring data security.</p>
+                    </section>
+                    <section data-aos="zoom-in" data-aos-delay="100" data-aos-once="false" data-elevator-stagger>
+                        <span class="icon solid major fa-database"></span>
+                        <h3>Database Management</h3>
+                        <div class="mini-hologram-container" data-hologram-container data-hologram-type="geometry"
+                             data-geometry="tetrahedron"></div>
+                        <p>Proficient in PostgreSQL, pgvector, and database design. Experience in data cleaning and
+                            optimization for AI applications.</p>
+                    </section>
+                    <section data-aos="zoom-in" data-aos-delay="150" data-aos-once="false" data-elevator-stagger>
+                        <span class="icon solid major fa-code"></span>
+                        <h3>Web Development</h3>
+                        <div class="mini-hologram-container" data-hologram-container data-hologram-type="geometry"
+                             data-geometry="torus"></div>
+                        <p>Experienced in building responsive web applications with Vue, React, and traditional web
+                            technologies. Focus on clean code architecture and modern development practices.</p>
+                    </section>
+                    <section data-aos="zoom-in" data-aos-delay="200" data-aos-once="false" data-elevator-stagger>
+                        <span class="icon solid major fa-cloud"></span>
+                        <h3>Cloud Security</h3>
+                        <div class="mini-hologram-container" data-hologram-container data-hologram-type="geometry"
+                             data-geometry="icosahedron"></div>
+                        <p>Designing secure cloud architectures with AWS and Azure. Implemented security best practices for
+                            data protection and compliance with industry standards.</p>
+                    </section>
+                    <section data-aos="zoom-in" data-aos-delay="250" data-aos-once="false" data-elevator-stagger>
+                        <span class="icon solid major fa-laptop-code"></span>
+                        <h3>Programming Languages</h3>
+                        <p>Proficient in Python, Java, PHP, TypeScript, JavaScript, and SQL. Experience in both
+                            object-oriented and functional programming paradigms.</p>
+                    </section>
+                    <section data-aos="zoom-in" data-aos-delay="300" data-aos-once="false" data-elevator-stagger>
+                        <span class="icon major fa-medal"></span>
+                        <h3>Professional Athletics</h3>
+                        <p>International level competitor in fencing, bringing discipline, strategic thinking, and
+                            performance under pressure to technical projects.</p>
+                    </section>
+                </div>
+                <ul class="actions" data-aos="fade-up" data-aos-delay="300" data-aos-once="false">
+                    <li><a href="github-projects.html" class="button" data-elevator-stagger>Learn more</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Three -->
+        <section id="three" class="wrapper style1 fade-up" data-elevator-section="contact">
+            <div class="inner">
+                <h2 data-aos="fade-up" data-aos-once="false" data-elevator-animate data-aos-anchor-placement="top-center">
+                    Get in touch</h2>
+                <p data-aos="fade-up" data-aos-delay="150" data-aos-once="false">I'm always interested in discussing new
+                    projects, opportunities, or collaborations. Feel free to reach out through any of the following
+                    methods:</p>
+                <div class="split style1">
+                    <section data-aos="fade-right" data-aos-delay="200" data-aos-once="false" data-elevator-animate>
+                        <form method="post" action="#">
+                            <div class="fields">
+                                <div class="field half">
+                                    <label for="name">Name</label>
+                                    <input type="text" name="name" id="name"/>
+                                </div>
+                                <div class="field half">
+                                    <label for="email">Email</label>
+                                    <input type="text" name="email" id="email"/>
+                                </div>
+                                <div class="field">
+                                    <label for="message">Message</label>
+                                    <textarea name="message" id="message" rows="5"></textarea>
+                                </div>
+                            </div>
+                            <ul class="actions">
+                                <li><a href="" class="button submit">Send Message</a></li>
+                            </ul>
+                        </form>
+                    </section>
+                    <section data-aos="fade-left" data-aos-delay="200" data-aos-once="false" data-elevator-animate>
+                        <ul class="contact">
+                            <li>
+                                <h3>Address</h3>
+                                <span>218 Boychuk Drive<br/>
+											Saskatoon, SK, S7H 4C9<br/>
 											Canada</span>
-										</li>
-										<li>
-											<h3>Email</h3>
-											<a href="mailto:rr.rousell@live.com">rr.rousell@live.com</a>
-										</li>
-										<li>
-											<h3>Phone</h3>
-											<span>(306) 281-5886</span>
-										</li>
-										<li>
-											<h3>Social</h3>
-											<ul class="icons">
-												<li><a href="https://github.com/Rousell3183" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-												<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-											</ul>
-										</li>
-									</ul>
-								</section>
-							</div>
-						</div>
-					</section>
+                            </li>
+                            <li>
+                                <h3>Email</h3>
+                                <a href="mailto:rr.rousell@live.com">rr.rousell@live.com</a>
+                            </li>
+                            <li>
+                                <h3>Phone</h3>
+                                <span>(306) 281-5886</span>
+                            </li>
+                            <li>
+                                <h3>Social</h3>
+                                <ul class="icons">
+                                    <li><a href="https://github.com/Rousell3183" class="icon brands fa-github"><span
+                                            class="label">GitHub</span></a></li>
+                                    <li><a href="#" class="icon brands fa-linkedin-in"><span
+                                            class="label">LinkedIn</span></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </section>
 
-			</div>
+    </div>
+</main>
 
-		<!-- Footer -->
-			<footer id="footer" class="wrapper style1-alt" data-elevator-section="footer">
-				<div class="inner">
-					<ul class="menu">
-						<li>&copy; Ryan Rousell. All rights reserved.</li><li>
-					</ul>
-				</div>
-			</footer>
-		<!-- Scripts -->
-			<!-- jQuery is loaded from CDN and made available to Vite -->
-			<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-			
-			<!-- Main Application Script (imports all other dependencies) -->
-			<script type="module" src="./assets/js/main.js"></script>
-			
-			<script>
-				// Add sci-fi theme class to ensure it takes precedence
-				document.addEventListener('DOMContentLoaded', function() {
-					document.documentElement.classList.add('sci-fi-theme');
-					document.body.classList.add('sci-fi-theme');
-					
-					// Additional theme class for wrappers and sections
-					document.querySelectorAll('.wrapper, .section, .spotlights').forEach(el => {
-						el.classList.add('sci-fi-theme');
-					});
-					
-					console.log('Applied sci-fi theme classes to all elements');
-				});
-			</script>
-	</body>
+<!-- Footer -->
+<footer id="footer" class="wrapper style1-alt" data-elevator-section="footer">
+    <div class="inner">
+        <ul class="menu">
+            <li>&copy; Ryan Rousell. All rights reserved.</li>
+            <li>
+        </ul>
+    </div>
+</footer>
+<!-- Scripts -->
+<!-- jQuery is loaded from CDN and made available to Vite -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<!-- Main Application Script (imports all other dependencies) -->
+<script type="module" src="./assets/js/main.js"></script>
+
+<script>
+    // Add sci-fi theme class to ensure it takes precedence
+    document.addEventListener('DOMContentLoaded', function () {
+        document.documentElement.classList.add('sci-fi-theme');
+        document.body.classList.add('sci-fi-theme');
+
+        // Additional theme class for wrappers and sections
+        document.querySelectorAll('.wrapper, .section, .spotlights').forEach(el => {
+            el.classList.add('sci-fi-theme');
+        });
+
+        console.log('Applied sci-fi theme classes to all elements');
+    });
+</script>
+<script>
+// Smooth section navigation and disable scroll
+function scrollToSection(id) {
+  var el = document.getElementById(id.replace('#', ''));
+  if (el) {
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+// Intercept sidebar nav clicks
+window.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('#sidebar nav a[href^="#"]').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      scrollToSection(this.getAttribute('href'));
+    });
+  });
+  // Prevent scroll via keys/wheel/touch
+  window.addEventListener('wheel', e => e.preventDefault(), { passive: false });
+  window.addEventListener('touchmove', e => e.preventDefault(), { passive: false });
+  window.addEventListener('keydown', function(e) {
+    // Prevent arrow keys, page up/down, space, home/end
+    if ([32,33,34,35,36,37,38,39,40].includes(e.keyCode)) {
+      e.preventDefault();
+    }
+  });
+});
+</script>
+</body>
 </html>

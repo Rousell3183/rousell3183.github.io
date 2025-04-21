@@ -1,11 +1,10 @@
+// Main application entry point
+import transitions from './transitions.js';
+
 /**
  * Main JavaScript Entry Point
  * Minimal implementation that handles just the essentials
  */
-
-// Import AOS (Animate On Scroll) library and styles
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 
 // Get reference to jQuery (loaded from CDN in index.html)
 const $ = window.jQuery;
@@ -30,13 +29,8 @@ function initializeTheme() {
   // Apply theme classes
   applySciThemeClasses();
   
-  // Initialize AOS animations
-  AOS.init({
-    duration: 800,
-    easing: 'ease-out',
-    once: false,
-    mirror: true
-  });
+  // Initialize animations with GSAP instead of AOS
+  console.log('Initializing animations with GSAP...');
   
   // Initialize smooth scrolling
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -131,17 +125,18 @@ function initializeJQueryPlugins() {
 
 // Initialize on DOM ready
 document.addEventListener('DOMContentLoaded', () => {
-  initializeTheme();
+  console.log('Initializing application...');
   
-  // Refresh AOS on window load for better timing
-  window.addEventListener('load', () => {
-    AOS.refresh();
-  });
+  // Initialize the starship corridor transition system
+  transitions.init();
+  
+  // Initialize theme
+  initializeTheme();
 });
 
 // Export theme initialization for external use
 export default {
   init: initializeTheme,
-  refreshAnimations: () => AOS.refresh()
+  refreshAnimations: () => console.log('Animation refresh called')
 };
 

@@ -5,6 +5,9 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/base.css" />
+		<link rel="stylesheet" href="assets/css/layout.css" />
+		<link rel="stylesheet" href="assets/css/sci-fi-theme.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -21,8 +24,10 @@
 				</nav>
 			</header>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+		<!-- Main content wrapper for Barba.js compatibility -->
+		<main data-barba="wrapper">
+			<!-- Wrapper -->
+			<div id="wrapper" class="wrapper">
 
 				<!-- Main -->
 					<section id="main" class="wrapper">
@@ -35,6 +40,7 @@
 					</section>
 
 			</div>
+		</main>
 
 		<!-- Footer -->
 			<footer id="footer" class="wrapper alt">
@@ -46,13 +52,23 @@
 			</footer>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+			<script type="module" src="./assets/js/main.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+			<script src="assets/doorTransition.js"></script>
+			<script>
+			  document.addEventListener('DOMContentLoaded', function () {
+				document.documentElement.classList.add('sci-fi-theme');
+				document.body.classList.add('sci-fi-theme');
+				document.querySelectorAll('.wrapper, .section, .spotlights').forEach(el => {
+				  el.classList.add('sci-fi-theme');
+				});
+			  });
+			  DoorTransition.ensureOverlay();
+			  DoorTransition.playOpenOnLoad();
+			  DoorTransition.enableOnLinks();
+			</script>
 
 	</body>
 </html>
