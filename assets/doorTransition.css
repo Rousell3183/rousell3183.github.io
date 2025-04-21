@@ -1,0 +1,98 @@
+/* assets/doorTransition.css - Styles for Grimdark Door Transition Overlay */
+.grimdark-paneldoor-overlay {
+    position: fixed !important;
+    left: 0; top: 0;
+    width: 100vw; height: 100vh;
+    z-index: 100000;
+    pointer-events: auto;
+    background: none;
+    display: block;
+}
+.grimdark-paneldoor-frame {
+    position: absolute;
+    left: 0; top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: none;
+    z-index: 100;
+}
+.grimdark-paneldoor-container {
+    position: absolute;
+    left: 0; top: 0;
+    width: 100vw; height: 100vh;
+    display: flex;
+    z-index: 10;
+}
+.grimdark-paneldoor-door {
+    position: absolute;
+    top: 0; bottom: 0;
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    pointer-events: none;
+}
+.grimdark-paneldoor-left.grimdark-paneldoor-door {
+    left: 0;
+    flex-direction: column;
+}
+.grimdark-paneldoor-right.grimdark-paneldoor-door {
+    right: 0;
+    flex-direction: column;
+}
+.grimdark-paneldoor-panel {
+    flex: 1 1 0;
+    width: 100%;
+    height: calc(100vh / 3);
+    background: linear-gradient(120deg, #23282c 70%, #5b5f63 100%);
+    border-bottom: 1.5px solid #2d3136;
+    border-top: 1.5px solid #44484b;
+    box-shadow: 0 0 16px #000a inset, 0 0 2px #bfc7ce30;
+    margin: 0;
+    min-height: 0;
+    opacity: 0.98;
+}
+.grimdark-paneldoor-left .grimdark-paneldoor-panel {
+    border-right: 2px solid #3b3f42;
+    border-left: none;
+}
+.grimdark-paneldoor-right .grimdark-paneldoor-panel {
+    border-left: 2px solid #3b3f42;
+    border-right: none;
+}
+.grimdark-paneldoor-panel:last-child { border-bottom: none; }
+.paneldoor-light-svg {
+    position: fixed;
+    left: 0; top: 0;
+    width: 100vw;
+    height: 54px;
+    z-index: 200;
+    pointer-events: none;
+    display: block;
+}
+.paneldoor-light-bulb {
+    transition: fill 0.18s, filter 0.12s;
+    filter: drop-shadow(0 0 10px #f44336cc) drop-shadow(0 0 14px #f4433620);
+}
+.paneldoor-light-bulb.green {
+    fill: #5fc34d !important;
+    filter: drop-shadow(0 0 12px #5fc34dcc) drop-shadow(0 0 18px #5fc34d40);
+}
+.paneldoor-light-bulb.red {
+    fill: #f44336 !important;
+    filter: drop-shadow(0 0 12px #f44336cc) drop-shadow(0 0 18px #f4433640);
+}
+.grimdark-elevator-fog {
+    position: fixed;
+    left: 0; top: 0; width: 100vw; height: 100vh;
+    background: radial-gradient(ellipse at 50% 60%, #fff9 60%, transparent 100%);
+    opacity: 0;
+    z-index: 10001;
+    pointer-events: none;
+    filter: blur(7px);
+    transition: opacity 0.6s;
+}
+.grimdark-lock-scroll {
+    overflow: hidden !important;
+}
