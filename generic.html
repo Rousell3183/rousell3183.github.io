@@ -1,16 +1,80 @@
 <!DOCTYPE HTML>
-<!--
-	Hyperspace by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
 		<title>Generic - Hyperspace by HTML5 UP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/base.css" />
+		<link rel="stylesheet" href="assets/css/layout.css" />
+		<link rel="stylesheet" href="assets/css/sci-fi-theme.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+		  /* Contact section layout improvements (shared with index) */
+		  #three .split {
+			display: flex;
+			flex-direction: row;
+			gap: 4vw;
+			justify-content: center;
+			align-items: stretch;
+			width: 100%;
+			max-width: 1100px;
+		  }
+		  #three .split > section {
+			background: rgba(10,22,49,0.85);
+			border-radius: 1.2rem;
+			box-shadow: 0 8px 32px 0 rgba(31,38,135,0.15);
+			padding: 2.5rem 2rem;
+			flex: 1 1 0;
+			min-width: 320px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		  }
+		  #three form .fields {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 1.2rem 2rem;
+		  }
+		  #three form .field.half {
+			flex: 1 1 45%;
+			min-width: 140px;
+		  }
+		  #three form .field {
+			margin-bottom: 1.2rem;
+		  }
+		  #three form .actions {
+			margin-top: 1.5rem;
+		  }
+		  #three .contact {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		  }
+		  #three .contact li {
+			margin-bottom: 1.5rem;
+		  }
+		  #three .contact h3 {
+			margin-bottom: 0.3rem;
+			font-size: 1.15em;
+		  }
+		  #three .contact .icons {
+			display: flex;
+			gap: 1.2rem;
+		  }
+		  @media (max-width: 900px) {
+			#three .split {
+			  flex-direction: column;
+			  gap: 2rem;
+			  align-items: stretch;
+			}
+		  }
+		  @media (max-width: 600px) {
+			#three .split > section {
+			  padding: 1.2rem 0.6rem;
+			}
+		  }
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -26,8 +90,10 @@
 				</nav>
 			</header>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+		<!-- Main content wrapper for Barba.js compatibility -->
+		<main data-barba="wrapper">
+			<!-- Wrapper -->
+			<div id="wrapper" class="wrapper">
 
 				<!-- Main -->
 					<section id="main" class="wrapper">
@@ -40,24 +106,35 @@
 					</section>
 
 			</div>
+		</main>
 
 		<!-- Footer -->
 			<footer id="footer" class="wrapper alt">
 				<div class="inner">
 					<ul class="menu">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>&copy; Untitled. All rights reserved.</li>
 					</ul>
 				</div>
 			</footer>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+			<script type="module" src="./assets/js/main.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+			<script src="assets/doorTransition.js"></script>
+			<script>
+			  document.addEventListener('DOMContentLoaded', function () {
+				document.documentElement.classList.add('sci-fi-theme');
+				document.body.classList.add('sci-fi-theme');
+				document.querySelectorAll('.wrapper, .section, .spotlights').forEach(el => {
+				  el.classList.add('sci-fi-theme');
+				});
+			  });
+			  DoorTransition.ensureOverlay();
+			  DoorTransition.playOpenOnLoad();
+			  DoorTransition.enableOnLinks();
+			</script>
 
 	</body>
 </html>

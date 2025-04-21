@@ -2,14 +2,50 @@
   "name": "rousell3183.github.io",
   "version": "1.0.0",
   "description": "Ryan Rousell's personal portfolio",
+  "type": "module",
   "main": "index.js",
   "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint --ext .js,.html .",
+    "format": "prettier --write .",
+    "compile:css": "postcss assets/css/main.css -o assets/css/main.min.css",
+    "compile:js": "vite build --config vite.config.js",
+    "compile:assets": "npm run compile:css && npm run compile:js",
+    "start": "npm run dev",
+    "deploy": "npm run build && npm run preview",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    "portfolio",
+    "sci-fi",
+    "starship",
+    "theme"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "aos": "^2.3.4"
-  }
+    "@barba/core": "^2.9.7",
+    "gsap": "^3.12.7",
+    "howler": "^2.2.3",
+    "three": "^0.152.2"
+  },
+  "devDependencies": {
+    "cssnano": "^7.0.6",
+    "eslint": "^9.24.0",
+    "postcss": "^8.5.3",
+    "postcss-cli": "^10.1.0",
+    "postcss-import": "^16.1.0",
+    "postcss-preset-env": "^8.5.1",
+    "postcss-reporter": "^7.1.0",
+    "postcss-url": "^10.1.3",
+    "prettier": "^3.5.3",
+    "vite": "^6.3.1"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all"
+  ]
 }
