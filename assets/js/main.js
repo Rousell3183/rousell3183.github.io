@@ -1,5 +1,4 @@
 // Main application entry point
-import transitions from './transitions.js';
 
 /**
  * Main JavaScript Entry Point
@@ -127,9 +126,6 @@ function initializeJQueryPlugins() {
 document.addEventListener('DOMContentLoaded', () => {
   console.log('Initializing application...');
   
-  // Initialize the starship corridor transition system
-  transitions.init();
-  
   // Initialize theme
   initializeTheme();
 });
@@ -139,4 +135,3 @@ export default {
   init: initializeTheme,
   refreshAnimations: () => console.log('Animation refresh called')
 };
-

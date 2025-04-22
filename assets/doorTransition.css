@@ -45,13 +45,13 @@
     flex: 1 1 0;
     width: 100%;
     height: calc(100vh / 3);
-    background: linear-gradient(120deg, #23282c 70%, #5b5f63 100%);
+    background: linear-gradient(120deg, #23282c 80%, #23282c 100%);
     border-bottom: 1.5px solid #2d3136;
     border-top: 1.5px solid #44484b;
-    box-shadow: 0 0 16px #000a inset, 0 0 2px #bfc7ce30;
+    box-shadow: 0 0 32px #000e inset, 0 0 8px #bfc7ce30;
     margin: 0;
     min-height: 0;
-    opacity: 0.98;
+    opacity: 1;
 }
 .grimdark-paneldoor-left .grimdark-paneldoor-panel {
     border-right: 2px solid #3b3f42;

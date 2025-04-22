@@ -388,7 +388,7 @@
         .spotlights .image img {
             width: 100%;
             height: 100%;
-            object-fit: contain;
+            object-fit: fill;
             display: block;
         }
 
@@ -419,14 +419,13 @@
     </div>
 </section>
 
-<!-- Main content wrapper for Barba.js compatibility -->
-<main data-barba="wrapper">
+<!-- Main content wrapper -->
     <div id="wrapper">
 
         <!-- Intro -->
-        <section id="intro" class="wrapper style1 fullscreen fade-up" data-elevator-section="intro">
+        <section id="intro" class="wrapper style1 fullscreen fade-up">
             <div class="inner">
-                <h1 class="fade-in-slide" data-elevator-animate>Ryan Rousell</h1>
+                <h1 class="fade-in-slide">Ryan Rousell</h1>
 
                 <!-- Main welcome hologram -->
                 <div class="hologram-container main-hologram" id="welcome-hologram"
@@ -435,11 +434,11 @@
                 </div>
 
                 <div class="animated-content">
-                    <p class="fade-in-slide delay-3" data-elevator-animate>I love the problem-solving aspects of
+                    <p class="fade-in-slide delay-3">I love the problem-solving aspects of
                         software
                         development and aspire to build expertise in cloud security, where I can combine my interests in
                         secure architecture, AI implementation, and robust system design.</p>
-                    <ul class="actions fade-in-slide delay-4" data-elevator-animate>
+                    <ul class="actions fade-in-slide delay-4">
                         <li><a href="#one" class="button scrolly" data-transition="elevator" data-direction="down">Explore
                             my projects</a></li>
                     </ul>
@@ -448,7 +447,7 @@
         </section>
 
         <!-- Projects Spotlight -->
-        <section id="one" class="wrapper style2 spotlights" data-elevator-section="projects">
+        <section id="one" class="wrapper style2 spotlights">
             <section data-aos="fade-right" data-aos-duration="800" data-aos-once="false">
                 <a href="ai-project.html" class="image"><img src="images/prj5.pld-flyers/Banner.png" alt=""
                                                              data-position="center center"></a>
@@ -502,8 +501,8 @@
 
             <section data-aos="fade-right" data-aos-duration="800" data-aos-delay="300" data-aos-once="false">
                 <a href="junk-busters.html" class="image"><img
-                        src="images/junkbusters/Screenshot_20250421_145026_Junk Busters banner.png" alt=""
-                        data-position="25% 25%" width=440px height="410px"/></a>
+                        src="images/junkbusters/jbbanner.png" alt=""
+                        data-position="25% 25%"/></a>
                 <div class="content">
                     <div class="inner">
                         <h2>Junk Busters Mobile Game</h2>
@@ -528,11 +527,9 @@
         </section>
 
         <!-- Two -->
-        <section id="two" class="wrapper style3 fade-up" data-elevator-section="skills">
+        <section id="two" class="wrapper style3 fade-up">
             <div class="inner">
-                <h2 data-aos="fade-up" data-aos-once="false" data-elevator-animate
-                    data-aos-anchor-placement="top-center">
-                    What I do</h2>
+                <h2 data-aos="fade-up" data-aos-once="false">What I do</h2>
                 <p data-aos="fade-up" data-aos-delay="150" data-aos-once="false">Combining technical expertise in
                     software
                     development with professional athletic experience, I bring a unique blend of skills to every
@@ -560,28 +557,28 @@
                 </div>
 
                 <div class="features">
-                    <section data-aos="zoom-in" data-aos-delay="250" data-aos-once="false" data-elevator-stagger>
+                    <section data-aos="zoom-in" data-aos-delay="250" data-aos-once="false">
                         <h3><i class="fas fa-robot" aria-hidden="true"></i> AI & Machine Learning</h3>
                         <div class="mini-hologram-container" data-hologram-container data-hologram-type="geometry"
                              data-geometry="octahedron"></div>
                         <p>Developed custom AI solutions using vector embedding algorithms to improve data matching and
                             streamline processing, while ensuring data security.</p>
                     </section>
-                    <section data-aos="zoom-in" data-aos-delay="100" data-aos-once="false" data-elevator-stagger>
+                    <section data-aos="zoom-in" data-aos-delay="100" data-aos-once="false">
                         <h3><i class="fas fa-database" aria-hidden="true"></i> Database Management</h3>
                         <div class="mini-hologram-container" data-hologram-container data-hologram-type="geometry"
                              data-geometry="tetrahedron"></div>
                         <p>Proficient in PostgreSQL, pgvector, and database design. Experience in data cleaning and
                             optimization for AI applications.</p>
                     </section>
-                    <section data-aos="zoom-in" data-aos-delay="150" data-aos-once="false" data-elevator-stagger>
+                    <section data-aos="zoom-in" data-aos-delay="150" data-aos-once="false">
                         <h3><i class="fas fa-laptop-code" aria-hidden="true"></i> Web Development</h3>
                         <div class="mini-hologram-container" data-hologram-container data-hologram-type="geometry"
                              data-geometry="torus"></div>
                         <p>Experienced in building responsive web applications with Vue, React, and traditional web
                             technologies. Focus on clean code architecture and modern development practices.</p>
                     </section>
-                    <section data-aos="zoom-in" data-aos-delay="200" data-aos-once="false" data-elevator-stagger>
+                    <section data-aos="zoom-in" data-aos-delay="200" data-aos-once="false">
                         <h3><i class="fas fa-cloud" aria-hidden="true"></i> Cloud Security</h3>
                         <div class="mini-hologram-container" data-hologram-container data-hologram-type="geometry"
                              data-geometry="icosahedron"></div>
@@ -589,36 +586,32 @@
                             for
                             data protection and compliance with industry standards.</p>
                     </section>
-                    <section data-aos="zoom-in" data-aos-delay="250" data-aos-once="false" data-elevator-stagger>
-                        <span class="icon solid major fa-laptop-code"></span>
-                        <h3>Programming Languages</h3>
+                    <section data-aos="zoom-in" data-aos-delay="250" data-aos-once="false">
+                        <h3><i class="fas fa-code" aria-hidden="true"></i> Programming Languages</h3>
                         <p>Proficient in Python, Java, PHP, TypeScript, JavaScript, and SQL. Experience in both
                             object-oriented and functional programming paradigms.</p>
                     </section>
-                    <section data-aos="zoom-in" data-aos-delay="300" data-aos-once="false" data-elevator-stagger>
-                        <span class="icon major fa-medal"></span>
-                        <h3>Professional Athletics</h3>
+                    <section data-aos="zoom-in" data-aos-delay="300" data-aos-once="false">
+                        <h3><i class="fas fa-wheelchair" aria-hidden="true"></i> Professional Athletics</h3>
                         <p>International level competitor in fencing, bringing discipline, strategic thinking, and
                             performance under pressure to technical projects.</p>
                     </section>
                 </div>
                 <ul class="actions" data-aos="fade-up" data-aos-delay="300" data-aos-once="false">
-                    <li><a href="/work-in-progress.html" class="button" data-elevator-stagger>Learn More</a></li>
+                    <li><a href="/work-in-progress.html" class="button">Learn More</a></li>
                 </ul>
             </div>
         </section>
 
         <!-- Three -->
-        <section id="three" class="wrapper style1 fade-up" data-elevator-section="contact">
+        <section id="three" class="wrapper style1 fade-up">
             <div class="inner">
-                <h2 data-aos="fade-up" data-aos-once="false" data-elevator-animate
-                    data-aos-anchor-placement="top-center">
-                    Get in touch</h2>
+                <h2 data-aos="fade-up" data-aos-once="false">Get in touch</h2>
                 <p data-aos="fade-up" data-aos-delay="150" data-aos-once="false">I'm always interested in discussing new
                     projects, opportunities, or collaborations. Feel free to reach out through any of the following
                     methods:</p>
                 <div class="split style1">
-                    <section data-aos="fade-right" data-aos-delay="200" data-aos-once="false" data-elevator-animate>
+                    <section data-aos="fade-right" data-aos-delay="200" data-aos-once="false">
                         <form method="post" action="#">
                             <div class="fields">
                                 <div class="field half">
@@ -631,7 +624,7 @@
                                 </div>
                                 <div class="field">
                                     <label for="message">Message</label>
-                                    <textarea name="message" id="message" rows="5"></textarea>
+                                    <textarea name="message" id="message" rows="5" cols="45"></textarea>
                                 </div>
                             </div>
                             <ul class="actions">
@@ -639,7 +632,7 @@
                             </ul>
                         </form>
                     </section>
-                    <section data-aos="fade-left" data-aos-delay="200" data-aos-once="false" data-elevator-animate>
+                    <section data-aos="fade-left" data-aos-delay="200" data-aos-once="false">
                         <ul class="contact">
                             <li>
                                 <h3>Address</h3>
@@ -658,10 +651,11 @@
                             <li>
                                 <h3>Social</h3>
                                 <ul class="icons">
-                                    <li><a href="https://github.com/Rousell3183" class="icon brands fa-github"><span
-                                            class="label">GitHub</span></a></li>
-                                    <li><a href="#" class="icon brands fa-linkedin-in"><span
-                                            class="label">LinkedIn</span></a></li>
+                                    <li><i class="fab fa-github"><a href="https://github.com/Rousell3183">
+                                        GitHub</a></i></li>
+                                    <li><i class="fab fa-linkedin"><a
+                                            href="https://ca.linkedin.com/in/ryan-rousell-701763120"> LinkedIn</a></i>
+                                    </li>
                                 </ul>
                             </li>
                         </ul>
@@ -671,10 +665,9 @@
         </section>
 
     </div>
-</main>
 
 <!-- Footer -->
-<footer id="footer" class="wrapper style1-alt" data-elevator-section="footer">
+<footer id="footer" class="wrapper style1-alt">
     <div class="inner">
         <ul class="menu">
             <li>&copy; Ryan Rousell. All rights reserved.</li>
@@ -689,6 +682,10 @@
 <!-- Main Application Script (imports all other dependencies) -->
 <script src="assets/js/jquery.scrolly.min.js"></script>
 <script src="assets/js/jquery.scrollex.min.js"></script>
+<!-- Door/Sound dependencies -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+<script src="assets/doorTransition.js"></script>
 <script type="module" src="./assets/js/main.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"/>
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
@@ -698,7 +695,6 @@
     });
 </script>
 <script>
-    // Add sci-fi theme class to ensure it takes precedence
     document.addEventListener('DOMContentLoaded', function () {
         document.documentElement.classList.add('sci-fi-theme');
         document.body.classList.add('sci-fi-theme');
@@ -708,11 +704,10 @@
             el.classList.add('sci-fi-theme');
         });
 
+        // (Revert) Do not auto-play door animation/sound on page load
+        // If you want to trigger the door, call DoorTransition.waitForUserToOpen() or similar elsewhere
         console.log('Applied sci-fi theme classes to all elements');
     });
-</script>
-<script>
-    // Remove any custom section-by-section scroll, restore default browser scroll
 </script>
 </body>
 </html>

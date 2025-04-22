@@ -1,280 +1,280 @@
 <!DOCTYPE HTML>
 <html class="sci-fi-theme">
-	<head>
-		<title>Ryan Rousell's Portfolio</title>
-		<meta charset="utf-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-		<meta name="last-modified" content="April 21, 2025"/>
-		<!-- Load fonts for sci-fi theme -->
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500&display=swap">
-		<!-- CSS files in proper cascade order -->
-		<link rel="stylesheet" href="assets/css/fontawesome-all.min.css"/>
-		<link rel="stylesheet" href="assets/css/base.css"/>
-		<link rel="stylesheet" href="assets/css/layout.css"/>
-		<link rel="stylesheet" href="assets/css/sci-fi-theme.css"/>
-		<noscript>
-			<link rel="stylesheet" href="assets/css/noscript.css"/>
-		</noscript>
-		<style>
-			/* High-priority overrides to ensure sci-fi theme takes precedence */
-			.sci-fi-theme.is-preload *,
-			.sci-fi-theme.is-preload *:before,
-			.sci-fi-theme.is-preload *:after {
-				animation: none;
-				transition: none;
-			}
-			/* Contact section layout improvements (shared with index) */
-			#three .split {
-				display: flex;
-				flex-direction: row;
-				gap: 4vw;
-				justify-content: center;
-				align-items: stretch;
-				width: 100%;
-				max-width: 1100px;
-			}
-			#three .split > section {
-				background: rgba(10,22,49,0.85);
-				border-radius: 1.2rem;
-				box-shadow: 0 8px 32px 0 rgba(31,38,135,0.15);
-				padding: 2.5rem 2rem;
-				flex: 1 1 0;
-				min-width: 320px;
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-			}
-			#three form .fields {
-				display: flex;
-				flex-wrap: wrap;
-				gap: 1.2rem 2rem;
-			}
-			#three form .field.half {
-				flex: 1 1 45%;
-				min-width: 140px;
-			}
-			#three form .field {
-				margin-bottom: 1.2rem;
-			}
-			#three form .actions {
-				margin-top: 1.5rem;
-			}
-			#three .contact {
-				list-style: none;
-				padding: 0;
-				margin: 0;
-			}
-			#three .contact li {
-				margin-bottom: 1.5rem;
-			}
-			#three .contact h3 {
-				margin-bottom: 0.3rem;
-				font-size: 1.15em;
-			}
-			#three .contact .icons {
-				display: flex;
-				gap: 1.2rem;
-			}
-			@media (max-width: 900px) {
-				#three .split {
-					flex-direction: column;
-					gap: 2rem;
-					align-items: stretch;
-				}
-			}
-			@media (max-width: 600px) {
-				#three .split > section {
-					padding: 1.2rem 0.6rem;
-				}
-			}
-			.gallery-img {
-				width: 100%;
-				max-width: 210px;
-				height: 140px;
-				object-fit: cover;
-				border-radius: 10px;
-				box-shadow: 0 4px 14px #0002;
-				background: #e6eaf2;
-				transition: transform 0.18s, box-shadow 0.18s;
-				margin-bottom: 0;
-				cursor: pointer;
-			}
-			.gallery-img:hover {
-				transform: scale(1.04);
-				box-shadow: 0 8px 32px #0004;
-				z-index: 2;
-			}
-			#img-modal {
-				display: none;
-				position: fixed;
-				z-index: 99999;
-				left: 0;
-				top: 0;
-				width: 100vw;
-				height: 100vh;
-				background: rgba(18,22,34,0.96);
-				justify-content: center;
-				align-items: center;
-				animation: fadeIn 0.18s;
-			}
-			#img-modal[style*="display: flex"] {
-				display: flex;
-			}
-			#img-modal img {
-				max-width: 90vw;
-				max-height: 90vh;
-				border-radius: 14px;
-				box-shadow: 0 8px 40px #000a;
-				position: relative;
-				z-index: 100000;
-			}
-			@keyframes fadeIn {
-				from { opacity: 0; }
-				to { opacity: 1; }
-			}
-		</style>
-	</head>
-	<body class="is-preload sci-fi-theme">
-	<!-- Sidebar -->
-	<section id="sidebar">
-		<div class="inner">
-			<nav>
-				<ul>
-					<li><a href="index.html#intro">Welcome</a></li>
-					<li><a href="index.html#one">Who I am</a></li>
-					<li><a href="index.html#two">What I do</a></li>
-					<li><a href="index.html#three">Get in touch</a></li>
-				</ul>
-			</nav>
-		</div>
-	</section>
-	<!-- Main content wrapper for Barba.js compatibility -->
-	<main data-barba="wrapper">
-		<div id="wrapper">
-			<section id="main" class="wrapper style1 fade-up">
-				<div class="inner">
-					<h1 class="major">Junk Busters Mobile Game</h1>
-					<div class="content-with-gallery" style="display:flex;flex-direction:row;align-items:flex-start;gap:2.5rem;">
-						<!-- Sidebar gallery -->
-						<div class="side-gallery" style="min-width:230px;max-width:260px;">
-							<div class="image-gallery" style="display:flex;flex-direction:column;gap:18px;align-items:center;">
-								<img src="images/junkbusters/Screenshot_20250421_145026_Junk Busters.png" alt="Junk Busters Screenshot 1" class="gallery-img selectable-img"/>
-								<img src="images/junkbusters/Screenshot_20250421_145045_Junk Busters.png" alt="Junk Busters Screenshot 2" class="gallery-img selectable-img"/>
-								<img src="images/junkbusters/Screenshot_20250421_145052_Junk Busters.png" alt="Junk Busters Screenshot 3" class="gallery-img selectable-img"/>
-								<img src="images/junkbusters/Screenshot_20250421_145121_Junk Busters.png" alt="Junk Busters Screenshot 4" class="gallery-img selectable-img"/>
-								<img src="images/junkbusters/Screenshot_20250421_145135_Junk Busters.png" alt="Junk Busters Screenshot 5" class="gallery-img selectable-img"/>
-							</div>
-						</div>
-						<!-- Main text content -->
-						<div style="flex:1;min-width:0;">
-							<div class="banner-image" style="width:100%;display:flex;justify-content:center;margin-bottom:2.5rem;">
-								<img src="images/junkbusters/Screenshot_20250421_145026_Junk Busters banner.png" alt="Junk Busters Banner" style="width:100%;max-width:760px;max-height:350px;object-fit:cover;border-radius:18px;box-shadow:0 6px 32px #0003;"/>
-							</div>
-							<h2>Game Overview</h2>
-							<p>Junk Busters is a Star Wars themed Android game where players control Luke Skywalker battling against Darth Vader. The game challenges players to time their lightsaber swings perfectly to deflect space junk being thrown by Vader. With authentic Star Wars sound effects, music, and animated characters, the game delivers an immersive experience that demonstrates my ability to create engaging interactive entertainment while applying core programming concepts.</p>
-							
-							<h2>Development Technology</h2>
-							<p>The game was developed using several key technologies:</p>
-							<ul>
-								<li><strong>Java</strong> - Primary programming language for Android development</li>
-								<li><strong>Android SDK</strong> - Framework for creating mobile applications</li>
-								<li><strong>Android Animation Framework</strong> - Native animation system for character movements and effects</li>
-								<li><strong>SQLite</strong> - Local database for storing leaderboard information</li>
-								<li><strong>Custom Collision Detection</strong> - Timing-based mechanics for gameplay interactions</li>
-							</ul>
-							
-							<h2>Game Features</h2>
-							<p>Junk Busters includes several engaging gameplay elements:</p>
-							<ul>
-								<li>Health system for both Luke and Vader (3 health points each)</li>
-								<li>Progressive difficulty as player blocks more junk</li>
-								<li>Victory condition: Reduce Vader's health to zero by successfully blocking 15 pieces of junk</li>
-								<li>Defeat condition: Luke's health reaches zero from missed blocks</li>
-								<li>Interactive sound effects including authentic Star Wars lightsaber sounds and character dialogue</li>
-								<li>Customized UI with glowing buttons and character animations</li>
-								<li>Local leaderboard system with photo capture functionality</li>
-							</ul>
-							
-							<h2>Technical Challenges</h2>
-							<p>During development, I overcame several technical hurdles:</p>
-							<ul>
-								<li>Implementing precise timing-based collision detection for junk objects</li>
-								<li>Creating synchronized animations with sound effects for game feedback</li>
-								<li>Designing an efficient game loop with proper object lifecycle management</li>
-								<li>Balancing difficulty progression to create an engaging player experience</li>
-								<li>Integrating camera functionality with the leaderboard system</li>
-								<li>Managing multiple media players for concurrent sound effects</li>
-							</ul>
-							
-							<h2>Learning Outcomes</h2>
-							<p>This project provided valuable experience in several areas:</p>
-							<ul>
-								<li>Object-oriented programming principles applied to game development</li>
-								<li>Event-driven programming with Android's animation framework</li>
-								<li>Asset management and resource optimization for mobile platforms</li>
-								<li>User experience design for interactive applications</li>
-								<li>Testing and debugging techniques for real-time applications</li>
-								<li>Project planning and incremental development methodology</li>
-							</ul>
-							
-							<h2>Download Resources</h2>
-							<p>The following resources are available for download:</p>
-							<ul>
-								<li><a href="./downloads/animations.zip">animations.zip</a> (6.3 MB) - Animation resources and assets</li>
-								<li><a href="./downloads/JunkBusters.zip">JunkBusters.zip</a> (113.6 MB) - Complete Android project source code</li>
-							</ul>
-							<p class="last-modified"><small>Last updated: April 21, 2025 | Content by Ryan Rousell</small></p>
-						</div>
-					</div>
-					<!-- Fullscreen modal for images -->
-					<div id="img-modal" style="display:none;position:fixed;z-index:99999;left:0;top:0;width:100vw;height:100vh;background:rgba(18,22,34,0.96);justify-content:center;align-items:center;">
-						<img id="modal-img" src="" alt="Full Image" style="max-width:90vw;max-height:90vh;border-radius:14px;box-shadow:0 8px 40px #000a;position:relative;z-index:100000;"/>
-					</div>
-					<script>
-						document.querySelectorAll('.selectable-img').forEach(img => {
-							img.addEventListener('click', function() {
-								document.getElementById('modal-img').src = this.src;
-								document.getElementById('img-modal').style.display = 'flex';
-							});
-						});
-						document.getElementById('img-modal').addEventListener('click', function(e) {
-							if (e.target === this) {
-								this.style.display = 'none';
-								document.getElementById('modal-img').src = '';
-							}
-						});
-					</script>
-				</div>
-			</section>
-		</div>
-	</main>
+<head>
+    <title>Ryan Rousell's Portfolio</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <meta name="last-modified" content="April 21, 2025"/>
+    <!-- Load fonts for sci-fi theme -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500&display=swap">
+    <!-- CSS files in proper cascade order -->
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css"/>
+    <link rel="stylesheet" href="assets/css/base.css"/>
+    <link rel="stylesheet" href="assets/css/layout.css"/>
+    <link rel="stylesheet" href="assets/css/sci-fi-theme.css"/>
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css"/>
+    </noscript>
+    <style>
+        /* High-priority overrides to ensure sci-fi theme takes precedence */
+        .sci-fi-theme.is-preload *,
+        .sci-fi-theme.is-preload *:before,
+        .sci-fi-theme.is-preload *:after {
+            animation: none;
+            transition: none;
+        }
+        /* Contact section layout improvements (shared with index) */
+        #three .split {
+            display: flex;
+            flex-direction: row;
+            gap: 4vw;
+            justify-content: center;
+            align-items: stretch;
+            width: 100%;
+            max-width: 1100px;
+        }
+        #three .split > section {
+            background: rgba(10,22,49,0.85);
+            border-radius: 1.2rem;
+            box-shadow: 0 8px 32px 0 rgba(31,38,135,0.15);
+            padding: 2.5rem 2rem;
+            flex: 1 1 0;
+            min-width: 320px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        #three form .fields {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem 2rem;
+        }
+        #three form .field.half {
+            flex: 1 1 45%;
+            min-width: 140px;
+        }
+        #three form .field {
+            margin-bottom: 1.2rem;
+        }
+        #three form .actions {
+            margin-top: 1.5rem;
+        }
+        #three .contact {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        #three .contact li {
+            margin-bottom: 1.5rem;
+        }
+        #three .contact h3 {
+            margin-bottom: 0.3rem;
+            font-size: 1.15em;
+        }
+        #three .contact .icons {
+            display: flex;
+            gap: 1.2rem;
+        }
+        @media (max-width: 900px) {
+            #three .split {
+                flex-direction: column;
+                gap: 2rem;
+                align-items: stretch;
+            }
+        }
+        @media (max-width: 600px) {
+            #three .split > section {
+                padding: 1.2rem 0.6rem;
+            }
+        }
+        .gallery-img {
+            width: 100%;
+            max-width: 210px;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 14px #0002;
+            background: #e6eaf2;
+            transition: transform 0.18s, box-shadow 0.18s;
+            margin-bottom: 0;
+            cursor: pointer;
+        }
+        .gallery-img:hover {
+            transform: scale(1.04);
+            box-shadow: 0 8px 32px #0004;
+            z-index: 2;
+        }
+        #img-modal {
+            display: none;
+            position: fixed;
+            z-index: 99999;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(18,22,34,0.96);
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.18s;
+        }
+        #img-modal[style*="display: flex"] {
+            display: flex;
+        }
+        #img-modal img {
+            max-width: 90vw;
+            max-height: 90vh;
+            border-radius: 14px;
+            box-shadow: 0 8px 40px #000a;
+            position: relative;
+            z-index: 100000;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body class="is-preload sci-fi-theme">
+<!-- Sidebar -->
+<section id="sidebar">
+    <div class="inner">
+        <nav>
+            <ul>
+                <li><a href="index.html#intro">Welcome</a></li>
+                <li><a href="index.html#one">Who I am</a></li>
+                <li><a href="index.html#two">What I do</a></li>
+                <li><a href="index.html#three">Get in touch</a></li>
+            </ul>
+        </nav>
+    </div>
+</section>
+<!-- Main content wrapper for Barba.js compatibility -->
+<main data-barba="wrapper">
+    <div id="wrapper">
+        <section id="main" class="wrapper style1 fade-up">
+            <div class="inner">
+                <h1 class="major">Junk Busters Mobile Game</h1>
+                <div class="content-with-gallery" style="display:flex;flex-direction:row;align-items:flex-start;gap:2.5rem;">
+                    <!-- Sidebar gallery -->
+                    <div class="side-gallery" style="min-width:230px;max-width:260px;">
+                        <div class="image-gallery" style="display:flex;flex-direction:column;gap:18px;align-items:center;">
+                            <img src="images/junkbusters/Screenshot_20250421_145026_Junk Busters.png" alt="Junk Busters Screenshot 1" class="gallery-img selectable-img"/>
+                            <img src="images/junkbusters/Screenshot_20250421_145045_Junk Busters.png" alt="Junk Busters Screenshot 2" class="gallery-img selectable-img"/>
+                            <img src="images/junkbusters/Screenshot_20250421_145052_Junk Busters.png" alt="Junk Busters Screenshot 3" class="gallery-img selectable-img"/>
+                            <img src="images/junkbusters/Screenshot_20250421_145121_Junk Busters.png" alt="Junk Busters Screenshot 4" class="gallery-img selectable-img"/>
+                            <img src="images/junkbusters/Screenshot_20250421_145135_Junk Busters.png" alt="Junk Busters Screenshot 5" class="gallery-img selectable-img"/>
+                        </div>
+                    </div>
+                    <!-- Main text content -->
+                    <div style="flex:1;min-width:0;">
+                        <div class="banner-image" style="width:100%;display:flex;justify-content:center;margin-bottom:2.5rem;">
+                            <img src="images/junkbusters/jbbanner.png" alt="Junk Busters Banner" style="width:100%;max-width:760px;max-height:350px;object-fit:cover;border-radius:18px;box-shadow:0 6px 32px #0003;"/>
+                        </div>
+                        <h2>Game Overview</h2>
+                        <p>Junk Busters is a Star Wars themed knock-off Android game where players control Luke Daywalker battling against Darth Bender. The game challenges players to time their lightsaber swings perfectly to deflect space junk being thrown by Vader. With authentic Star Wars sound effects, music, and animated characters, the game delivers an immersive experience that demonstrates my ability to create engaging interactive entertainment while applying core programming concepts.</p>
 
-	<!-- Footer -->
-	<footer id="footer" class="wrapper alt">
-		<div class="inner">
-			<ul class="menu">
-				<li>&copy; Ryan Rousell. All rights reserved.</li>
-			</ul>
-		</div>
-	</footer>
+                        <h2>Development Technology</h2>
+                        <p>The game was developed using several key technologies:</p>
+                        <ul>
+                            <li><strong>Java</strong> - Primary programming language for Android development</li>
+                            <li><strong>Android SDK</strong> - Framework for creating mobile applications</li>
+                            <li><strong>Android Animation Framework</strong> - Native animation system for character movements and effects</li>
+                            <li><strong>SQLite</strong> - Local database for storing leaderboard information</li>
+                            <li><strong>Custom Collision Detection</strong> - Timing-based mechanics for gameplay interactions</li>
+                        </ul>
 
-	<!-- Scripts -->
-	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-	<script type="module" src="./assets/js/main.js"></script>
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script> -->
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script> -->
-	<!-- <script src="assets/doorTransition.js"></script> -->
-	<script>
-	  document.addEventListener('DOMContentLoaded', function () {
-		document.documentElement.classList.add('sci-fi-theme');
-		document.body.classList.add('sci-fi-theme');
-		document.querySelectorAll('.wrapper, .section, .spotlights').forEach(el => {
-		  el.classList.add('sci-fi-theme');
-		});
-	  });
-	  // DoorTransition.ensureOverlay();
-	  // DoorTransition.playOpenOnLoad();
-	  // DoorTransition.enableOnLinks();
-	</script>
+                        <h2>Game Features</h2>
+                        <p>Junk Busters includes several engaging gameplay elements:</p>
+                        <ul>
+                            <li>Health system for both Luke and Vader (3 health points each)</li>
+                            <li>Progressive difficulty as player blocks more junk</li>
+                            <li>Victory condition: Reduce Vader's health to zero by successfully blocking 15 pieces of junk</li>
+                            <li>Defeat condition: Luke's health reaches zero from missed blocks</li>
+                            <li>Interactive sound effects including authentic Star Wars lightsaber sounds and character dialogue</li>
+                            <li>Customized UI with glowing buttons and character animations</li>
+                            <li>Local leaderboard system with photo capture functionality</li>
+                        </ul>
+
+                        <h2>Technical Challenges</h2>
+                        <p>During development, I overcame several technical hurdles:</p>
+                        <ul>
+                            <li>Implementing precise timing-based collision detection for junk objects</li>
+                            <li>Creating synchronized animations with sound effects for game feedback</li>
+                            <li>Designing an efficient game loop with proper object lifecycle management</li>
+                            <li>Balancing difficulty progression to create an engaging player experience</li>
+                            <li>Integrating camera functionality with the leaderboard system</li>
+                            <li>Managing multiple media players for concurrent sound effects</li>
+                        </ul>
+
+                        <h2>Learning Outcomes</h2>
+                        <p>This project provided valuable experience in several areas:</p>
+                        <ul>
+                            <li>Object-oriented programming principles applied to game development</li>
+                            <li>Event-driven programming with Android's animation framework</li>
+                            <li>Asset management and resource optimization for mobile platforms</li>
+                            <li>User experience design for interactive applications</li>
+                            <li>Testing and debugging techniques for real-time applications</li>
+                            <li>Project planning and incremental development methodology</li>
+                        </ul>
+
+                        <h2>Download Resources</h2>
+                        <p>The following resources are available for download:</p>
+                        <ul>
+                            <li><a href="./downloads/animations.zip">animations.zip</a> (6.3 MB) - Animation resources and assets</li>
+                            <li><a href="./downloads/JunkBusters.zip">JunkBusters.zip</a> (113.6 MB) - Complete Android project source code</li>
+                        </ul>
+                        <p class="last-modified"><small>Last updated: April 21, 2025 | Content by Ryan Rousell</small></p>
+                    </div>
+                </div>
+                <!-- Fullscreen modal for images -->
+                <div id="img-modal" style="display:none;position:fixed;z-index:99999;left:0;top:0;width:100vw;height:100vh;background:rgba(18,22,34,0.96);justify-content:center;align-items:center;">
+                    <img id="modal-img" src="" alt="Full Image" style="max-width:90vw;max-height:90vh;border-radius:14px;box-shadow:0 8px 40px #000a;position:relative;z-index:100000;"/>
+                </div>
+                <script>
+                    document.querySelectorAll('.selectable-img').forEach(img => {
+                        img.addEventListener('click', function() {
+                            document.getElementById('modal-img').src = this.src;
+                            document.getElementById('img-modal').style.display = 'flex';
+                        });
+                    });
+                    document.getElementById('img-modal').addEventListener('click', function(e) {
+                        if (e.target === this) {
+                            this.style.display = 'none';
+                            document.getElementById('modal-img').src = '';
+                        }
+                    });
+                </script>
+            </div>
+        </section>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer id="footer" class="wrapper alt">
+    <div class="inner">
+        <ul class="menu">
+            <li>&copy; Ryan Rousell. All rights reserved.</li>
+        </ul>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script type="module" src="./assets/js/main.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script> -->
+<!-- <script src="assets/doorTransition.js"></script> -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.documentElement.classList.add('sci-fi-theme');
+        document.body.classList.add('sci-fi-theme');
+        document.querySelectorAll('.wrapper, .section, .spotlights').forEach(el => {
+            el.classList.add('sci-fi-theme');
+        });
+    });
+    // DoorTransition.ensureOverlay();
+    // DoorTransition.playOpenOnLoad();
+    // DoorTransition.enableOnLinks();
+</script>
 </body>
 </html>
